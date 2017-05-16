@@ -15,6 +15,20 @@ https://portal.qiniu.com/bucket/muhlenxi/resource
 
 --------
 
+#### 链接
+
+*带 Title 的连接*
+
+This is [Baidu](http://www.baidu.com/ "百度的链接") inline link.
+
+*不带 Title 的连接*
+
+[Google](http://www.google.com)
+
+*自动链接*
+
+<http://www.muhlenxi.com>
+
 
 #### 绘制表格
 
