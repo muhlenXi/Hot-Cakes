@@ -11,11 +11,6 @@
 七牛云资源管理
 https://portal.qiniu.com/bucket/muhlenxi/resource
 
-#### 添加图片
-
-<div align=center>
-<img src="http://7xvffo.com1.z0.glb.clouddn.com/actionsheet.PNG" width="320" height="568" alt="选项列表图"/>
-</div>
 
 #### 绘制表格
 
@@ -25,7 +20,18 @@ https://portal.qiniu.com/bucket/muhlenxi/resource
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-*感谢阅读，有什么意见可以给我留言!*
+
+#### 上标和小标
+
+这是一个上标 <sup>[1]</sup>
+
+这是下标 H<sub>2</sub>O
+
+#### 添加图片
+
+<div align=center>
+<img src="http://7xvffo.com1.z0.glb.clouddn.com/actionsheet.PNG" width="320" height="568" alt="选项列表图"/>
+</div>
 
 ### 结束语
 
