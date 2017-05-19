@@ -1,5 +1,7 @@
-一些编程的小技巧
+###主题
 
-> 1、可以通过 extension 将 controller 的具体功能实现代码分发到其他 swift 文件中。
-
-*举例：可以将 tableView 的 data source 和 delegate 分发到 XXTableView.swift 文件中。可以将一些配置UI数据的方法分发到 XXConfigure.swift文件中。*
+* Swift 既是一门高层级语言，又是一门低层级语言。
+* Swift 是一门多范式语言。
+* Swift 十分灵活。
+* Swift 代码可以做到紧凑，准确，同时保持清晰。
+* 除非你有意为之，否则 Swift 在实践中总是安全的。
