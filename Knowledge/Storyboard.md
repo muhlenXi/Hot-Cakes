@@ -1,4 +1,4 @@
-### Swift知识点
+### Storyboard
 
 #### 1、@IBDesignable 关键字可以让视图在storyboard中绘制出来。
 
@@ -22,7 +22,3 @@ var lineWidth:CGFloat = 3 {
     }
 }
 ```
-
-#### forEach 和 map 的区别
-
-*forEach 并不处理 closure 参数的返回值。因此它适合用来对数组中的元素进行一些操作，而能不用来返回结果。*
