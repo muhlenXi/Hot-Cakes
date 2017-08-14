@@ -1,3 +1,14 @@
+### GitIgnore
+
+*安装命令行*
+
+	 echo "function gi() { curl -L -s https://www.gitignore.io/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
+	 
+*生成 .gitignore 文件*
+
+	gi swift >>.gitignore
+
+
 ### RubyGems
 
 *添加源*
