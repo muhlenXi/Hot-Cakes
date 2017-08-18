@@ -25,7 +25,7 @@
 
 ### Bugs Record
 
-*[Tabbar 隐藏后空白](https://github.com/muhlenXi/iOS-Ark/blob/master/BugsRecord/hideTablebar.md)
+* [Tabbar 隐藏后空白](https://github.com/muhlenXi/iOS-Ark/blob/master/BugsRecord/hideTablebar.md)
 
 ### Knowledge
 
@@ -52,7 +52,7 @@
 
 ### Rxswift
 
-*[Rxswift concepts](https://github.com/muhlenXi/iOS-Ark/blob/master/RxSwift/RxSwift.md)
+* [Rxswift concepts](https://github.com/muhlenXi/iOS-Ark/blob/master/RxSwift/RxSwift.md)
 
 ### User Interface
 
