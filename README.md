@@ -6,7 +6,7 @@
 * [Other frameworks](https://github.com/muhlenXi/iOS-Ark/blob/master/Frameworks/usedFrameworks.md)
 * [Markdown syntax](https://github.com/muhlenXi/iOS-Ark/blob/master/Markdown/Markdown-Syntax.md)
 * [Terminal commands](https://github.com/muhlenXi/iOS-Ark/blob/master/Terminal/Terminal-Commands.md)
-* [Image size note]()
+* [Image size note](https://github.com/muhlenXi/iOS-Ark/blob/master/ImageNotes/images.md)
 
 ### 优雅编程
 
