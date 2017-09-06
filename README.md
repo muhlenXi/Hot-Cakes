@@ -7,6 +7,7 @@
 * [Markdown syntax](https://github.com/muhlenXi/iOS-Ark/blob/master/Markdown/Markdown-Syntax.md)
 * [Terminal commands](https://github.com/muhlenXi/iOS-Ark/blob/master/Terminal/Terminal-Commands.md)
 * [Image size note](https://github.com/muhlenXi/iOS-Ark/blob/master/ImageNotes/images.md)
+* [如何制作 macOS 系统启动盘](https://github.com/muhlenXi/iOS-Ark/blob/master/Guide/howToMakeSierra.md)
 
 ### 优雅编程
 
