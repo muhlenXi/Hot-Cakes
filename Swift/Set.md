@@ -59,7 +59,7 @@ let aSubtractB = setA.subtracting(sestB)
 
 把 Set 用作内部支持类型
 
-indexSet
+IndexSet
 
 CharacterSet
 
