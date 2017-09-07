@@ -34,6 +34,10 @@
 * [NavigationBar 隐藏问题](https://github.com/muhlenXi/iOS-Ark/blob/master/BugsRecord/NavigationHidden.md)
 * [Tabbar 高度不一致问题](https://github.com/muhlenXi/iOS-Ark/blob/master/BugsRecord/TabbarHeight.md)
 
+### Swift
+
+* [Array](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Array.md)
+
 ### Knowledge
 
 * [Array Extensions](https://github.com/muhlenXi/iOS-Ark/blob/master/Knowledge/ArrayExtensions.md)
