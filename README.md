@@ -37,6 +37,7 @@
 ### Swift
 
 * [Array](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Array.md)
+* [Dictionary](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Dictionary.md)
 
 ### Knowledge
 
