@@ -39,6 +39,8 @@
 * [Array](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Array.md)
 * [Dictionary](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Dictionary.md)
 * [Set](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Set.md)
+* [条件分支语句 样式匹配](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Condition.md)
+* [函数](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/func.md)
 
 ### Knowledge
 
