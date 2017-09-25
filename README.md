@@ -9,6 +9,10 @@
 * [Image size note](https://github.com/muhlenXi/iOS-Ark/blob/master/ImageNotes/images.md)
 * [如何制作 macOS 系统启动盘](https://github.com/muhlenXi/iOS-Ark/blob/master/Guide/howToMakeSierra.md)
 
+### 译文
+
+1、[当你开始学习编程时，你最希望知道什么？](https://github.com/muhlenXi/iOS-Ark/blob/master/Quora/Quora_27things.md)
+
 ### 优雅编程
 
 > 好的代码有一些共同的特性：简单、自我解释、优秀的组织、良好的文档、良好的命名、优秀的设计以及可以久经考验。
