@@ -7,6 +7,11 @@
 * [Markdown syntax](https://github.com/muhlenXi/iOS-Ark/blob/master/Markdown/Markdown-Syntax.md)
 * [Terminal commands](https://github.com/muhlenXi/iOS-Ark/blob/master/Terminal/Terminal-Commands.md)
 * [Image size note](https://github.com/muhlenXi/iOS-Ark/blob/master/ImageNotes/images.md)
+* [如何制作 macOS 系统启动盘](https://github.com/muhlenXi/iOS-Ark/blob/master/Guide/howToMakeSierra.md)
+
+### 译文
+
+1、[当你开始学习编程时，你最希望知道什么？](https://github.com/muhlenXi/iOS-Ark/blob/master/Quora/Quora_27things.md)
 
 ### 优雅编程
 
@@ -32,6 +37,14 @@
 * [NavigationBar 不透明问题](https://github.com/muhlenXi/iOS-Ark/blob/master/BugsRecord/NavigationBarTranslucent.md)
 * [NavigationBar 隐藏问题](https://github.com/muhlenXi/iOS-Ark/blob/master/BugsRecord/NavigationHidden.md)
 * [Tabbar 高度不一致问题](https://github.com/muhlenXi/iOS-Ark/blob/master/BugsRecord/TabbarHeight.md)
+
+### Swift
+
+* [Array](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Array.md)
+* [Dictionary](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Dictionary.md)
+* [Set](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Set.md)
+* [条件分支语句 样式匹配](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/Condition.md)
+* [函数](https://github.com/muhlenXi/iOS-Ark/blob/master/Swift/func.md)
 
 ### Knowledge
 
