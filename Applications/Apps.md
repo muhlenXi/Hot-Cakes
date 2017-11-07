@@ -4,12 +4,11 @@
 
 | Class       |     Name       | URL  |
 | ----------- |:-------------:| -----:|
-| English | 欧路词典 ||
+| English | 欧路英语词典 ||
 || LDOCE 英英词典|[Evolution - App by Thiago Holanda](https://appsto.re/cn/4Bnlib.i)|
 || 沪江开心词场 ||
 || 百词斩 ||
 || 知米背单词 ||
-|| 欧路英语词典 ||
 | 开发 | WWDC ||
 || Coding ||
 || 码云 ||
