@@ -9,6 +9,7 @@
 || 沪江开心词场 ||
 || 百词斩 ||
 || 知米背单词 ||
+|| 欧路英语词典 ||
 | 开发 | WWDC ||
 || Coding ||
 || 码云 ||
@@ -18,6 +19,7 @@
 || skew ||
 || filterstorm  ||
 | Bluetooth | LightBlue ||
+|| nRF Toolbox ||
 | Tools | Pin ||
 || Google 翻译 ||
 || LiFi ||
@@ -41,8 +43,10 @@
 || QQ ||
 || Skype ||
 || Tumblr ||
+|| Instagram ||
+|| Tumblr ||
 | Music | 网易云音乐 ||
-| News| 好奇心日报 ||
+| | QQ 音乐 ||
 | Hobby | 蜂鸟摄影 ||
 | Video | YouTube ||
 | Bank |招商银行 ||
@@ -51,4 +55,13 @@
 || 掌上生活 ||
 | 共享单车 |摩拜单车||
 || ofo ||
+| 新闻 | 好奇心日报 ||
+|| 即刻 ||
+| 购物 | 京东 ||
+|| 苏宁易购 ||
+|| 亚马逊购物 ||
+|| 天猫 ||
+|| 淘宝 ||
+|| Apple Store ||
+|| 淘宝  ||
 
