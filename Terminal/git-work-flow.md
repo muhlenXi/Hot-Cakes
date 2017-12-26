@@ -10,7 +10,7 @@
 	
 3、添加文件、提交
 
-	git add.
+	git add .
 	
 	git commit -m "描述语句"
 	
@@ -28,7 +28,7 @@
 	
 产生冲突后：在冲突分支上，解决冲突后
 
-	git add.
+	git add .
 	
 	git rebase --continue
 	
