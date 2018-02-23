@@ -38,6 +38,10 @@
 	
 ### common git commands
 
+*本地分支关联远程仓库*
+
+	git remote add origin 远程仓库地址
+
 *clone 远程仓库到本地*
 
 	git clone 远程仓库地址
@@ -62,6 +66,10 @@
 *同步本地新建分支到远端仓库（远程仓库无该分支）*
 
 	git push --set-upstream origin 分支名
+	
+*本地分支最新记录强制覆盖远程分支*
+
+	git push origin master --force
 	
 *删除远程仓库分支*
 
