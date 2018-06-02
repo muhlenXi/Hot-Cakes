@@ -16,7 +16,7 @@
 * 9、[NSDateFormatter格式化参数](https://gist.github.com/muhlenXi/e9a506d2b0a94bdc1438a58994216374)
 * 8、[设置 Navigationbar 的相关属性](https://gist.github.com/muhlenXi/88291978d0b595cea3e067f83d639486)
 * 7、[一个 segue 的 prepare 方法 demo](https://gist.github.com/muhlenXi/cd382fab42b8189f83beb39ed844f08c)
-* 6、[关于归档和解档的一个 Model](https://gist.github.com/muhlenXi/5461013488f5c33cfc7e6adf21123557
+* 6、[关于归档和解档的一个 Model](https://gist.github.com/muhlenXi/5461013488f5c33cfc7e6adf21123557)
 * 5、[ 用 Done 键来关闭文本框的键盘](https://gist.github.com/muhlenXi/6c19928608f06983195112e0d3521172)
 * 4、[给 View 添加阴影](https://gist.github.com/muhlenXi/f05e49eb66286ef4e93815f8b30ac4d7)
 * 3 、[MD5 SHA1加密](https://gist.github.com/muhlenXi/9bed638f48509ae583d649eae6b959ac)
