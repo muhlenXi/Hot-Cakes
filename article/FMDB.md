@@ -1,19 +1,8 @@
----
-title: 使用 FMDB 管理 SQLite 数据库
-date: 2016-03-17 11:06:46
-categories: blog
-tags: [FMDB,Objective-C]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/03/17/FMDB](http://muhlenxi.com/2016/03/17/FMDB)*
+### 使用 FMDB 管理 SQLite 数据库
 
 ### 导语：
 
 > FMDB 是一个面向对象的管理数据库的轻量级框架，它用 Obective-C 语言对数据库 SQLite 的 C 语言API 进行了封装，并且它对多线程的并发操作进行了处理，是线程安全的!
-
-　点击阅读全文来深入了解 FMDB 的如何使用。
-
-<!-- more -->
 
 本文，我会以一个小 demo (同学录)的方式讲在项目中如何使用FMDB的。假如我们有一个老师，他要保存一个班级的所有同学的个人信息，他可以添加学生、删除学生、根据条件查找学生，比如性别、名字等 和 修改学生信息。
 

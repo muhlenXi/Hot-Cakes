@@ -1,17 +1,9 @@
----
-title: iOS BLE 开发小记[7] - 与小米手环 2 进行数据交互
-date: 2017-05-08 15:45:00
-categories: blog
-tags: [BLE]
----
+### 与小米手环 2 进行数据交互
 
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/05/08/iOS-Bluetooth-Low-Energy-Develop-Chapter7](http://muhlenxi.com/2017/05/08/iOS-Bluetooth-Low-Energy-Develop-Chapter7)*
 
 ### 导语：
 
 > 根据前面学到的知识，在这一篇将以小米手环2为硬件，对前面的知识点进行实践操作。实践是检验真理的唯一标准！
-
-<!-- more -->
 
 关于 BLE 开发，有一款很要用的 APP 可以协助开发，它就是 [LightBlue](https://itunes.apple.com/us/app/lightblue-explorer-bluetooth-low-energy/id557428110?mt=8) ,有需要的小伙伴可以去 App Store 下载。
 

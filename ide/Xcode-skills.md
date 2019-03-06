@@ -1,8 +1,4 @@
----
-title: Xcode skills
-date: 2017-03-21 15:25:58
-tags: [Xcode]
----
+### Xcode skills
 
 > 本文记录的是 Xcode 软件的使用技巧。
 

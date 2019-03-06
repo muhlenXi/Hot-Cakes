@@ -1,20 +1,10 @@
----
-title: Effective objective-C 2.0 学习笔记
-date: 2015-11-10 14:52:41
-categories: 学习笔记
-tags: [编写高质量iOS与OS X代码的52个有效方法,学习笔记]
----
-
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2015/11/10/Effective-Objective-C-2-0](http://muhlenxi.com/2015/11/10/Effective-Objective-C-2-0)*
+### Effective objective-C 2.0 学习笔记
 
 #### 前言：
 
 > Effective objective-C,翻译过来是编写高质量 iOS 与 OS X 代码的52个有效方法，作者是 Matt Galloway ，本书是世界级 C++ 开发大师 Scott Meyers 亲自担当顾问编辑的 “Effective Software Development Series” 系列丛书中的新作，Amazon 全五星评价。全书从语法、接口与API设计、内存管理、框架等7大方面总结和探讨了 Objective-C 编程中 52 个鲜为人知的和容易被忽视的特性和陷阱！
 
 学习贵在记录和总结收获！点击阅读全文了解更多！　　
-
-<!-- more -->
 
 Objective-C 源自 Smalltalk ，是一门相当动态的语言，代码是在运行期（runtime）执行的！
 

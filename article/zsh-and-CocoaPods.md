@@ -1,20 +1,8 @@
----
-title: zsh 的配置和 CocoaPods 的安装与使用
-date: 2015-10-05 16:17:11
-categories: blog
-tags: [zsh,CocoaPods]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2015/10/05/zsh-and-CocoaPods](http://muhlenxi.com/2015/10/05/zsh-and-CocoaPods)*
+### zsh 的配置和 CocoaPods 的安装与使用
 
 ### 导语：
 
 > 对于一个爱折腾的人是闲不住的，最近经常和`终端(terminal)`打交道，看着这普普通通的界面，实在在是人不可忍了，有一次网上查资料的时候，了解到`zsh`可以配制出高逼格的用户界面，就是配置有些复杂。但是程序猿都是一群聪明的家伙，研究出`oh-my-zsh`这个开源项目，让zsh配置降到了零门槛，而且完全兼容`bash`。
-
-　　
-　　废话不多说，开整吧！
-　　
-　　<!-- more -->
 　　
 ### 通过oh-my-zsh配置zsh
 

@@ -1,10 +1,4 @@
----
-title: Vim 使用小记
-date: 2018-08-14 21:20:38
-tags: Tool
----
-
-*版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: <http://muhlenxi.com/2018/08/14/vim>*
+### Vim 使用小记
 
 ### Vim 是什么
 

@@ -1,19 +1,8 @@
----
-title: Swift开发者必备Tips - 学习笔记
-date: 2016-10-26 12:08:31
-categories: Swift
-tags: [学习笔记,Swift开发者必备Tips]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/10/26/Swift-Tips](http://muhlenxi.com/2016/10/26/Swift-Tips)*
+### Swift开发者必备Tips - 学习笔记
 
 ### 前言：
 
 > 这本书是王巍的关于Swift语言的知识点的集合，是作者学习和实践Swift的一些心得，作者以一个个的小技巧和知识点的形式，编写成了这本书，是中级开发人员的Swift进阶读本，该书涵盖了一个中高级开发人员需要知道的Swift语言的方方面面。
-
-点击阅读全文来了解一下详情吧。
-
-<!-- more -->
 
 #### 正文
 

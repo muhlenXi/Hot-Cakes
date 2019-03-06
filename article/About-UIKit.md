@@ -1,17 +1,8 @@
----
-title: App Frameworks 之 UIKit 框架
-date: 2017-02-01 11:20:19
-categories: blog
-tags: [UIKit]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: <http://muhlenxi.com/2017/02/01/About-UIKit>*
+### App Frameworks 之 UIKit 框架
 
 ### 导语：
 
 > 本文是关于 UIKit 框架的描述。
-
-<!-- more -->
 
 如果你想要学 mac OS / iOS App 开发，你需要参考的第一手资料则是 [Apple Developer Documentation](https://developer.apple.com/documentation),在这里，Apple 公司会不定期更新最新的 Kit(开发包)，包括 API reference（API 接口）、技术文章和示例代码等。
 

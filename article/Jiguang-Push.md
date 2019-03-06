@@ -1,11 +1,4 @@
----
-title: 关于集成极光推送
-date: 2016-11-11 17:40:09
-categories: blog
-tags: [Objective-C,极光推送]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/11/11/Jiguang-Push](http://muhlenxi.com/2016/11/11/Jiguang-Push)*
+### 关于集成极光推送
 
 #### 前言：
 

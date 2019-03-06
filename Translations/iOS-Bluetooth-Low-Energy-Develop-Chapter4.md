@@ -1,17 +1,8 @@
----
-title: iOS BLE 开发小记[4] - 如何实现 CoreBluetooth 后台运行模式
-date: 2017-05-03 10:45:00
-categories: blog
-tags: [BLE]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/05/03/iOS-Bluetooth-Low-Energy-Develop-Chapter4](http://muhlenxi.com/2017/05/03/iOS-Bluetooth-Low-Energy-Develop-Chapter4)*
+### 如何实现 CoreBluetooth 后台运行模式
 
 ### 导语：
 
 > 在这一节，主要是 iOS APP 关于蓝牙后台处理方面的知识和经验。
-
-<!-- more -->
 
 对于 iOS APP 来说，知道你的 APP 是运行在前台还是运行在后台很重要。一个 APP 在后台运行状态下的行为表现必须不同于前台，因为 iOS 设备的系统资源是有限的。关于 iOS 后台运行处理的更多论述 请查阅 [Background Execution](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4).
 

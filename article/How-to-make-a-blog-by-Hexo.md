@@ -1,19 +1,8 @@
----
-title: 在 Mac 上如何搭建 Hexo 个人博客
-date: 2015-08-01 11:11:17
-categories: blog
-tags: [Hexo,Next]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2015/08/01/How-to-make-a-blog-by-Hexo/](http://muhlenxi.com/2015/08/01/How-to-make-a-blog-by-Hexo/)*
+### 在 Mac 上如何搭建 Hexo 个人博客
 
 ### 导语：
 
 > 在网上经常浏览技术牛人的博客来学习技术能力，突然有个念头闪现在脑海,为啥我不自己也弄个博客记录自己的学习收获和分享自己的掉坑经验，避免后来的人不像我一样掉坑，岂不更好！对于一个爱折腾的我，立马就开始各种搜索资料，各种踩坑。
-    
-　　更多详情请看[我为什么开始写博客]()
-
-<!-- more -->
 
 　　对于不了解Hexo是什么的？可以去Hexo官网了解一下。[Hexo简介](https://hexo.io/zh-cn/) ,废话不扯了，开始正题!
 

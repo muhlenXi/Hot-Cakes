@@ -1,17 +1,10 @@
----
-title: iOS BLE 开发小记[2] - 如何实现一个 Local Central
-date: 2017-04-29 10:45:00
-categories: blog
-tags: [BLE]
----
+###  如何实现一个 Local Central
 
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/04/29/iOS-Bluetooth-Low-Energy-Develop-Chapter2](http://muhlenxi.com/2017/04/29/iOS-Bluetooth-Low-Energy-Develop-Chapter2)*
 
 ### 导语：
 
 > 在这一节，你将会学到，如何通过 CoreBluetooth 框架来实现 Local Central 方面的功能和代理方法。 
 
-<!-- more -->
 
 在 BLE 通信中，实现了 Central 规范的设备，能够调用许多常用的方法，比如搜索和连接可用的 Peripheral，然后与 Peripheral 提供的数据进行交互。但是实现了 Peripheral 规范的设备同样能够调用许多常见的方法，但是也有一些不同。比如，发布和广播 Service，对 Central 的读写请求进行响应以及 响应Central 的订阅请求。
 

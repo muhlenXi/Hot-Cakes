@@ -1,19 +1,10 @@
----
-title: 对 iOS 开发中 MVC 模式的理解
-date: 2016-02-04 10:41:11
-categories: blog
-tags: [MVC]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/02/04/MVC](http://muhlenxi.com/2016/02/04/MVC)*
+### 对 iOS 开发中 MVC 模式的理解
 
 #### 前言：
 
 > MVC，全名是 Model View Controller，是模型 (model)－视图 (view)－控制器 (controller) 的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。
 
 学习贵在记录和总结收获！点击阅读全文了解更多！　　
-
-<!-- more -->
 
 #### 正文：
 

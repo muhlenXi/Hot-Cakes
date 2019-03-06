@@ -1,19 +1,8 @@
----
-title: 初识 Swift3 
-date: 2016-08-19 09:37:28
-categories: Swift
-tags: [Swift3初体验]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/08/19/Swift3](http://muhlenxi.com/2016/08/19/Swift3)*
+### 初识 Swift3 
 
 ### 导语：
 
 > Swift 是一个新的编程语言，使用它可以开发 iOS、macOS、watchOS 和 tvOS 等平台上的 APP ，它比 C 和 Objective-C 语言更好的胜任这项工作，Swift 采用安全的编程模式，它加入了一些现代的特色使得编程更加容易、更加灵活和更加有趣，Swift 基于成熟的受人喜爱的 Cocoa 和 CocoaTouch 框架，这是一个重新定义软件是如何开发的机会！Just enjoy it！。
-
-点击阅读全文来了解一下详情吧。
-
-<!-- more -->
 
 ### Swift 之初体验
 

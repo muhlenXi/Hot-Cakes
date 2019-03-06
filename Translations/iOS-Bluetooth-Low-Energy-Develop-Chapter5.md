@@ -1,17 +1,8 @@
----
-title: iOS BLE 开发小记[5] - 与 Remote Peripheral 交互的最佳实践
-date: 2017-05-05 11:45:00
-categories: blog
-tags: [BLE]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/05/05/iOS-Bluetooth-Low-Energy-Develop-Chapter5](http://muhlenxi.com/2017/05/05/iOS-Bluetooth-Low-Energy-Develop-Chapter5)*
+### 与 Remote Peripheral 交互的最佳实践
 
 ### 导语：
 
 > 在这一节，主要是与 Remote Peripheral 交互的最佳实践，以及实际开发过程中应该注意的事项。
-
-<!-- more -->
 
 CoreBluetooth 框架使 Central 端的工作变得容易透明、容易理解。也就是说，你的 APP 可以控制和负责 Central 的大部分方面，比如搜索设备、建立连接、与 Remote Peripheral 进行数据交互。本章将以负责的方式来提供一些规范和最佳实践，尤其是当你为 iOS 设备开发 APP 的时候。
 

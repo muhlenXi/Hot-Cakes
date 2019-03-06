@@ -1,10 +1,4 @@
----
-title: 高德 SDK 的正确打开方式
-date: 2016-04-07 10:02:20
-categories: blog
-tags: [Objective-C,高德地图SDK]
----
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/04/07/Gaode-Map](http://muhlenxi.com/2016/04/07/Gaode-Map)*
+###  高德 SDK 的正确打开方式
 
 ### 导语：
 
@@ -12,10 +6,6 @@ tags: [Objective-C,高德地图SDK]
 
 *点击下载[本文的demo](https://github.com/muhlenXi/gaodeMapDemo)研究，记得给star支持博主的努力哦！*
 
-
-  点击阅读全文来瞅瞅如何开发吧。
-
-<!-- more -->
 
 *由于官方文档更新不及时，很多方法弃用了，新的方法只能自己摸索了。本文大部分是参考官方文档来做的。*
 

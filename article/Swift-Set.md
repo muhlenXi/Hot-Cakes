@@ -1,16 +1,9 @@
----
-title: Swift 数据结构之 Set
-date: 2018-07-23 15:20:38
-tags:
----
-
-*版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: <http://muhlenxi.com/2018/07/23/Swift-Set>*
+### Swift 数据结构之 Set
 
 ### 基本概念
 
 > Set 是包含唯一元素的无序集合。
 
-<!-- more -->
 
 #### 使用场景：
 

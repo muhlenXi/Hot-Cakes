@@ -1,11 +1,4 @@
----
-title: iOS开发图片那些事儿
-date: 2016-09-30 14:17:09
-categories: 开发备忘
-tags: [iOS开发图片]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/09/30/About-Images](http://muhlenxi.com/2016/09/30/About-Images)*
+### iOS开发图片那些事儿
 
 ### 前言：
 

@@ -1,18 +1,10 @@
----
-title: AppCode skills
-date: 2017-03-22 15:25:58
-tags: [Xcode]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/03/22/AppCode](http://muhlenxi.com/2017/03/22/AppCode)*
+### AppCode skills
 
 #### 详情简介：
 
 > 本文主要记录的是 JetBrains 公司的 IDE 的使用技巧，包括 AppCode、IntelliJ IDEA 等。
 
 纸上得来终觉浅，绝知此事要躬行！
-
-<!-- more -->　　
 
 
 ### AppCode

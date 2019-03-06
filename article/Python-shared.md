@@ -1,19 +1,10 @@
----
-title: 如何分享 Python 代码到 PyPI 社区
-date: 2017-11-06 22:58:15
-categories: blog
-tags: [Python, PyPI]
+### 如何分享 Python 代码到 PyPI 社区
 
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: <http://muhlenxi.com/2017/11/06/Python-shared>*
 
 ### 导语：
 
 > Python 是一个高级、通用、强大的开源编程语言，然而 Python 的流行和强大离不开开源社区的代码共享，所以，我们应该积极向 Python 社区开放你的代码 ... 共享总是一件好事，不是吗？
 > 本文将教你如何向 PyPI 社区共享代码。
-
-<!-- more -->
 
 经过以下的 7 个步骤，即可成功的向 PyPI 社区提交代码模块。
 

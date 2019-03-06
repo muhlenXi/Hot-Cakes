@@ -1,19 +1,10 @@
----
-title: iOS APP 多语言支持
-date: 2016-07-07 16:47:19
-categories: blog
-tags: [多语言,Objective-C]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/07/07/Localized-Language](http://muhlenxi.com/2016/07/07/Localized-Language)*
+### iOS APP 多语言支持
 
 ### 导语：
 
 > APP 根据手机系统的语言进行显示。第二种是在 APP 内自行设置语言，也就是应用内切换语言，设置的是什么语言，就显示什么语言。
 
   写个 Demo 玩一下，实践是检验真理的唯一标准。
-
-<!-- more -->
 
 ### 基础文件配置:　　
 

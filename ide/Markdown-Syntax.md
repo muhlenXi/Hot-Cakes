@@ -1,7 +1,5 @@
 #### Markdown语法
 
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/03/21/Xcode-skills]()*
-
 #### 代码块
 
 ```objc

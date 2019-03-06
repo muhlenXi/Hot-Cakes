@@ -1,17 +1,9 @@
----
-title: iOS BLE 开发小记[1] - CoreBluetooth 是什么
-date: 2017-04-27 15:45:00
-categories: blog
-tags: [BLE]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/04/27/iOS-Bluetooth-Low-Energy-Develop-Chapter1](http://muhlenxi.com/2017/04/27/iOS-Bluetooth-Low-Energy-Develop-Chapter1)*
+###  CoreBluetooth 是什么
 
 ### 导语：
 
 > 不知不觉从事 iOS 低功耗蓝牙开发也很长一段时间了，一直没时间来的及把自己关于这方面的学习和收获写下来，最近项目迭代更新上线完，有点业余时间，抓紧时间总结一下，说这是与同阶段的小伙伴们之间的交流也好，是给后来的小伙伴的掉坑经验也好。毕竟时间是挤出来的！做技术的人一般都有一个很开放的心态！ 
 
-<!-- more -->
 
 现在我们都知道，很多智能硬件设备都已经集成了低功耗蓝牙模块，这样我们就可以开发一个 iOS 或者 Mac APP 与它们进行交互。从 macOS 10.9 和 iOS 6 以后，Mac 和 iOS 设备就支持 低功耗蓝牙技术了，我们可以通过 `CoreBluetooth` 这个框架与底层的各种蓝牙协议栈进行交互，比如 GATT、ATT 和 L2CAP 等。
 

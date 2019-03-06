@@ -1,11 +1,4 @@
----
-title: '程序员修炼之道-读书笔记 '
-date: 2016-11-17 09:53:15
-categories: 学习笔记
-tags: [程序员修炼之道,读书笔记]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/11/17/The-Pragmatic-Programmer](http://muhlenxi.com/2016/11/17/The-Pragmatic-Programmer)*
+### 程序员修炼之道-读书笔记 
 
 #### 前言：
 

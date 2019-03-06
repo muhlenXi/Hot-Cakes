@@ -1,11 +1,4 @@
----
-title: iOS BLE 开发小记[6] - 设置本地设备为 Peripheral 的最佳实践
-date: 2017-05-07 12:45:00
-categories: blog
-tags: [BLE]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/05/07/iOS-Bluetooth-Low-Energy-Develop-Chapter6](http://muhlenxi.com/2017/05/07/iOS-Bluetooth-Low-Energy-Develop-Chapter6)*
+### 设置本地设备为 Peripheral 的最佳实践
 
 ### 导语：
 

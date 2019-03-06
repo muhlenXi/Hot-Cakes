@@ -1,17 +1,8 @@
----
-title: App Frameworks 之 Swift Standard Library
-date: 2017-02-15 11:20:19
-categories: blog
-tags: [Swift Standard Library]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: <http://muhlenxi.com/2017/02/15/About-SwiftStandardLibrary>*
+### App Frameworks 之 Swift Standard Library
 
 ### 导语：
 
 > 本文是关于 Swift Standard Library 的描述。
-
-<!-- more -->
 
 Swift 标准库用于解决复杂的问题和编写高性能，可读性性好的代码。[传送门](https://developer.apple.com/documentation/swift)
 

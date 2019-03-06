@@ -1,17 +1,8 @@
----
-title: 如何判断对象相同？
-date: 2018-05-06 10:25:30
-categories: blog
-tags: 
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: <http://muhlenxi.com/2018/05/06/Equal-Object>*
+### 如何判断对象相同？
 
 ### 导语：
 
 > 在编程中，如果两个对象中的所有属性分别相等，则我们可以认为这两个对象是同一个对象。那么在 Swift 和 Objective-C 中，是怎样的情况呢？
-
-<!-- more -->
 
 ### 在 Swift 中
 

@@ -1,19 +1,9 @@
----
-title: UITabBarController 的详细运用
-date: 2016-09-05 14:42:25
-categories: blog
-tags: [Objective-C,UITabBarController]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2017/09/05/UITabbarController](http://muhlenxi.com/2017/09/05/UITabbarController)*
+### UITabBarController 的详细运用
 
 ### 导语：
 
 > iPhone 和 iPod touch 都可以使用 UITabBarController 类，令用户能够在多个视图控制器之间切换，并且能够定制屏幕底部的标签栏。用户只需点击一下屏幕，就能切换到其他视图，而且还可以通过 More 按钮来选择并编辑需要显示在屏幕底部标签栏里的标签（Tab）。
 
-  写个 demo 玩一下，实践是检验真理的唯一标准。
-
-<!-- more -->
 
 ### 创建系统 Item
 

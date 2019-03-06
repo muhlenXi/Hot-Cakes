@@ -1,18 +1,10 @@
----
-title: App Frameworks 之 Foundation 框架
-date: 2017-01-20 10:20:19
-categories: blog
-tags: [Foundation]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: <http://muhlenxi.com/2017/01/20/About-Foundation>*
+### App Frameworks 之 Foundation 框架
 
 ### 导语：
 
 > 学习软件开发最好的方式就是去努力学好英语，然后去看官方的第一手资料 - 软件开发指南。
 > 本文是关于 Foundation 框架的描述。
 
-<!-- more -->
 
 如果你想要学 mac OS / iOS App 开发，你需要参考的第一手资料则是 [Apple Developer Documentation](https://developer.apple.com/documentation),在这里，Apple 公司会不定期更新最新的 Kit(开发包)，包括 API reference（API 接口）、技术文章和示例代码等。
 

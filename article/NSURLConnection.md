@@ -1,19 +1,10 @@
----
-title: 关于 NSURLConnection 的使用
-date: 2016-01-15 15:48:39
-categories: blog
-tags: [NSURLConnection,Objective-C]
----
-
- *版权声明：本文为 muhlenXi 原创文章，欢迎转载，转载请注明来源: [http://muhlenxi.com/2016/01/15/NSURLConnection](http://muhlenxi.com/2016/01/15/NSURLConnection)*
+### 关于 NSURLConnection 的使用
 
 #### 前言：
 
 > NSURLConnection 是 iOS7之前专门用来做数据请求的类。
 
 学习贵在记录和总结收获！点击阅读全文了解更多！　　
-
-<!-- more -->
 
 #### 基础知识
 
