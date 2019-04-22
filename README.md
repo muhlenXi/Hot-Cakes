@@ -27,9 +27,17 @@
 - 7、[RubyGems 使用小记](/ide/Gem-skills.md)
 - 8、[Terminal 使用小记](/ide/Terminal-skill.md)
 
-### 知识点
+### 基础知识
 
 - [第 0 篇](/knowledge/knowledge-points.md)
+
+### 算法
+
+- [冒泡排序](/algorithms/bubbleSort.md)
+- [选择排序](/algorithms/selectionSort.md)
+- [插入排序](/algorithms/insertionSort.md)
+- [希尔排序](/algorithms/shellSort.md)
+- [快速排序](/algorithms/quickSort.md)
 
 ### 读书笔记
 
