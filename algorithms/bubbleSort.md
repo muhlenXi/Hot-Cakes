@@ -31,6 +31,33 @@ func bubbleSort(unsortedArray: inout [Int]){
 }
 ```
 
+用 Objective-C 实现的算法如下：
+
+```objc
+- (NSArray*) bubbleSort: (NSArray *) unsortedArray {
+    if (unsortedArray.count <= 1) {
+        return unsortedArray;
+    }
+    
+    NSMutableArray *sortedArray = [unsortedArray mutableCopy];
+    
+    for (int i = 0; i < sortedArray.count-1; i++) {
+        BOOL exchanged = NO;
+        for (int j = 0; j< sortedArray.count-1-i; j++) {
+            if ([sortedArray[j] integerValue] > [sortedArray[j+1] integerValue]) {
+                [sortedArray exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+                exchanged = YES;
+            }
+        }
+        if (!exchanged) {
+            break;
+        }
+    }
+    
+    return [sortedArray copy];
+}
+```
+
 ## 验证算法
 
 ```swift

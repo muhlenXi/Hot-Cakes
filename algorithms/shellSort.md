@@ -37,6 +37,34 @@ func shellSort(unsortedArray: inout [Int]) {
 }
 ```
 
+用 Objective-C 实现的算法如下：
+
+```objc
+/// 希尔排序 插入排序改进版
+- (NSArray *) shellSort: (NSArray *) unsortedArray {
+    if (unsortedArray.count < 2) {
+        return unsortedArray;
+    }
+    
+    NSMutableArray *sortedArray = [unsortedArray mutableCopy];
+    NSInteger gap = unsortedArray.count / 2;
+    
+    while (gap > 0) {
+        for (NSInteger i = gap; i < sortedArray.count; i++) {
+            NSInteger formal = i - gap;
+            while (formal >= 0 && [sortedArray[formal] integerValue] > [sortedArray[formal+gap] integerValue]) {
+                [sortedArray exchangeObjectAtIndex:formal withObjectAtIndex:formal+gap];
+                formal -= gap;
+            }
+        }
+        gap = gap / 2;
+    }
+    
+    return sortedArray;
+}
+```
+
+
 ## 验证算法
 
 ```swift

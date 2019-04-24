@@ -58,6 +58,52 @@ func insertionSort1(unsortedArray: inout [Int]) {
 }
 ```
 
+用 Objective-C 实现的算法如下：
+
+```objc
+
+/// 先移位 再插入
+- (NSArray*) insertionSort: (NSArray *) unsortedArray {
+    if (unsortedArray.count <= 1) {
+        return unsortedArray;
+    }
+    
+    NSMutableArray *sortedArray = [unsortedArray mutableCopy];
+    for (NSInteger i = 1; i < sortedArray.count; i++) {
+        NSNumber *insertValue = sortedArray[i];
+        NSInteger insertIndex = i-1;
+        while (insertIndex >= 0 && [sortedArray[insertIndex] integerValue] > [insertValue integerValue]) {
+            sortedArray[insertIndex+1] = sortedArray[insertIndex];
+            insertIndex--;
+        }
+        
+        if (insertIndex != i - 1) {
+            sortedArray[insertIndex+1] = insertValue;
+        }
+    }
+    
+    return [sortedArray copy];
+}
+
+/// 利用交换代替插入
+- (NSArray *) insertionSort1: (NSArray *) unsortedArray {
+    if (unsortedArray.count < 2) {
+        return unsortedArray;
+    }
+    
+    NSMutableArray *sortedArray = [unsortedArray mutableCopy];
+    for (NSInteger i = 1; i < sortedArray.count; i++) {
+        NSInteger j = i - 1;
+        while (j >= 0 && [sortedArray[j] integerValue] > [sortedArray[j+1] integerValue]) {
+            [sortedArray exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+            j--;
+        }
+    }
+    
+    return [sortedArray copy];
+}
+```
+
 ## 验证算法
 
 ```swift

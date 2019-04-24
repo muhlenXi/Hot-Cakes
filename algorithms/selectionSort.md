@@ -36,6 +36,32 @@ func selectionSort(unsortedArray: inout [Int]) {
 }
 ```
 
+用 Objective-C 语言实现的算法如下：
+
+```objc
+- (NSArray*) selectionSort: (NSArray *) unsortedArray {
+    if (unsortedArray.count <= 1) {
+        return unsortedArray;
+    }
+    
+    NSMutableArray *sortedArray = [unsortedArray mutableCopy];
+    NSInteger minValueIndex = 0;
+    
+    for (NSInteger i = 0; i < sortedArray.count-1; i++) {
+        minValueIndex = i;
+        for (NSInteger j = i + 1; j < sortedArray.count; j++) {
+            if ([sortedArray[j] integerValue] < [sortedArray[minValueIndex] integerValue]) {
+                minValueIndex = j;
+            }
+        }
+        if (minValueIndex != i) {
+            [sortedArray exchangeObjectAtIndex:minValueIndex withObjectAtIndex:i];
+        }
+    }
+    return [sortedArray copy];
+}
+```
+
 ## 验证算法
 
 ```swift
