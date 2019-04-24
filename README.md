@@ -31,6 +31,11 @@
 
 - [第 0 篇](/knowledge/knowledge-points.md)
 
+### 经验
+
+- [iOS 开发技巧之 UI篇](/tuiqiaoNote/UserInterface.md)
+- [iOS 开发技巧之 业务篇](/tuiqiaoNote/Business.md)
+
 ### 算法
 
 - [冒泡排序](/algorithms/bubbleSort.md)
