@@ -10,6 +10,8 @@
 
 ## 算法实现
 
+用 Swift 实现的算法如下：
+
 ```swift
 // 归并
 func mergeSort(unsortedArray: [Int]) -> [Int]{
@@ -44,6 +46,44 @@ func mergeSort(unsortedArray: [Int]) -> [Int]{
     }
     
     return result
+}
+```
+
+用 Objective-C 实现的算法如下：
+
+```objc
+/// 归并排序
+- (NSArray*) mergeSort: (NSArray *) unsortedArray {
+    if (unsortedArray.count <= 1) {
+        return unsortedArray;
+    }
+    // 拆分
+    NSInteger mid = unsortedArray.count / 2;
+    NSArray *leftArray = [self mergeSort:[unsortedArray subarrayWithRange:NSMakeRange(0, mid)]];
+    NSArray *rightArray = [self mergeSort:[unsortedArray subarrayWithRange:NSMakeRange(mid, unsortedArray.count-mid)]];
+    // 合并
+    NSInteger leftIndex = 0;
+    NSInteger rightIndex = 0;
+    NSMutableArray *sortedArrray = [NSMutableArray array];
+    while (leftIndex < leftArray.count && rightIndex < rightArray.count) {
+        if ([leftArray[leftIndex] integerValue] > [rightArray[rightIndex] integerValue]){
+            [sortedArrray addObject:rightArray[rightIndex]];
+            rightIndex++;
+        } else {
+            [sortedArrray addObject:leftArray[leftIndex]];
+            leftIndex++;
+        }
+    }
+    // 添加左边剩余元素
+    if (leftIndex < leftArray.count) {
+        [sortedArrray addObjectsFromArray:[leftArray subarrayWithRange:NSMakeRange(leftIndex, leftArray.count-leftIndex)]];
+    }
+    // 添加右边剩余元素
+    if (rightIndex < rightArray.count) {
+        [sortedArrray addObjectsFromArray:[rightArray subarrayWithRange:NSMakeRange(rightIndex, rightArray.count-rightIndex)]];
+    }
+    
+    return sortedArrray;
 }
 ```
 
