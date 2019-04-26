@@ -38,7 +38,7 @@
 
 ### 算法
 
-- [冒泡排序](/algorithms/bubbleSort.md)
+- [冒泡排序](/algorithms/bubbleSort.md) `Swift` `Objective-C`
 - [选择排序](/algorithms/selectionSort.md)
 - [插入排序](/algorithms/insertionSort.md)
 - [希尔排序](/algorithms/shellSort.md)
