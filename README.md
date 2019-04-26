@@ -39,12 +39,12 @@
 ### 算法
 
 - [冒泡排序](/algorithms/bubbleSort.md) `Swift` `Objective-C`
-- [选择排序](/algorithms/selectionSort.md)
-- [插入排序](/algorithms/insertionSort.md)
-- [希尔排序](/algorithms/shellSort.md)
-- [快速排序](/algorithms/quickSort.md)
-- [归并排序](/algorithms/mergeSort.md)
-- [堆排序](/algorithms/heapsort.md)
+- [选择排序](/algorithms/selectionSort.md)  `Swift` `Objective-C`
+- [插入排序](/algorithms/insertionSort.md) `Swift` `Objective-C`
+- [希尔排序](/algorithms/shellSort.md) `Swift` `Objective-C`
+- [快速排序](/algorithms/quickSort.md) `Swift` 
+- [归并排序](/algorithms/mergeSort.md) `Swift` `Objective-C`
+- [堆排序](/algorithms/heapsort.md) 
 - [计数排序](/algorithms/countingSort.md)
 - [桶排序](/algorithms/bucketSort.md)
 - [基数排序](/algorithms/radixSort.md)
