@@ -43,6 +43,11 @@
 - [插入排序](/algorithms/insertionSort.md)
 - [希尔排序](/algorithms/shellSort.md)
 - [快速排序](/algorithms/quickSort.md)
+- [归并排序](/algorithms/mergeSort.md)
+- [堆排序](/algorithms/heapsort.md)
+- [计数排序](/algorithms/countingSort.md)
+- [桶排序](/algorithms/bucketSort.md)
+- [基数排序](/algorithms/radixSort.md)
 
 ### 读书笔记
 
