@@ -12,6 +12,8 @@
 
 ## 算法实现
 
+用 Swift 实现的算法如下：
+
 ```swift
 /// 快速排序
 func quickSort(unsortedArray: inout [Int], leftIndex: Int, rightIndex: Int){
@@ -43,6 +45,38 @@ func quickSort(unsortedArray: inout [Int], leftIndex: Int, rightIndex: Int){
     }
     if i < rightIndex {
         quickSort(unsortedArray: &unsortedArray, leftIndex: i, rightIndex: rightIndex)
+    }
+}
+```
+
+用 Objective-C 实现的算法如下：
+
+```objc
+- (void)quickSort:(NSMutableArray*) unsorted leftIndex:(NSInteger) leftIndex rightIndex:(NSInteger) rightIndex {
+
+    NSInteger i = leftIndex;
+    NSInteger j = rightIndex;
+    NSInteger pivot = [unsorted[(leftIndex+rightIndex)/2] integerValue];
+    while (i <= j) {
+        while ([unsorted[i] integerValue] < pivot) {
+            i++;
+        }
+        while ([unsorted[j] integerValue] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            [unsorted exchangeObjectAtIndex:i withObjectAtIndex:j];
+            i++;
+            j--;
+        }
+    }
+    // 递归快排右边分组序列
+    if (i < rightIndex) {
+        [self quickSort:unsorted leftIndex:i rightIndex:rightIndex];
+    }
+    // 递归快排左边分组序列
+    if (leftIndex < j) {
+        [self quickSort:unsorted leftIndex:leftIndex rightIndex:j];
     }
 }
 ```
