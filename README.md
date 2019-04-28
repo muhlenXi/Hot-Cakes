@@ -42,7 +42,7 @@
 - [选择排序](/algorithms/selectionSort.md)  `Swift` `Objective-C`
 - [插入排序](/algorithms/insertionSort.md) `Swift` `Objective-C`
 - [希尔排序](/algorithms/shellSort.md) `Swift` `Objective-C`
-- [快速排序](/algorithms/quickSort.md) `Swift` 
+- [快速排序](/algorithms/quickSort.md) `Swift` `Objective-C`
 - [归并排序](/algorithms/mergeSort.md) `Swift` `Objective-C`
 - [堆排序](/algorithms/heapsort.md) 
 - [计数排序](/algorithms/countingSort.md)
