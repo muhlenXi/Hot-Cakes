@@ -2,18 +2,16 @@
 
 #### 前言：
 
-> Effective objective-C,翻译过来是编写高质量 iOS 与 OS X 代码的52个有效方法，作者是 Matt Galloway ，本书是世界级 C++ 开发大师 Scott Meyers 亲自担当顾问编辑的 “Effective Software Development Series” 系列丛书中的新作，Amazon 全五星评价。全书从语法、接口与API设计、内存管理、框架等7大方面总结和探讨了 Objective-C 编程中 52 个鲜为人知的和容易被忽视的特性和陷阱！
-
-学习贵在记录和总结收获！点击阅读全文了解更多！　　
+> Effective objective-C,翻译过来是编写高质量 iOS 与 OS X 代码的52个有效方法，作者是 Matt Galloway ，本书是世界级 C++ 开发大师 Scott Meyers 亲自担当顾问编辑的 “Effective Software Development Series” 系列丛书中的新作，Amazon 全五星评价。全书从语法、接口与API设计、内存管理、框架等7大方面总结和探讨了 Objective-C 编程中 52 个鲜为人知的和容易被忽视的特性和陷阱！　
 
 Objective-C 源自 Smalltalk ，是一门相当动态的语言，代码是在运行期（runtime）执行的！
 
 
 #### 第1条：了解Objective-C语言的起源
 
-*C++,Java等使用的是function calling ，运行所执行的代码由编译器来决定。如果调用的函数是多态的，那么在运行时就要按照 virtual table (虚方法表) 来查出应该执行哪个函数实现。*
+*C++, Java 等使用的是 function calling ，运行所执行的代码由编译器来决定。如果调用的函数是多态的，那么在运行时就要按照 virtual table (虚方法表) 来查出应该执行哪个函数实现。*
 
-*Objective-C语言使用的是动态绑定的 message structure (消息结构) ，其运行时所执行的代码由运行环境来决定；无论多态，总是在运行时才会去检查对象的类型和查找所要执行的方法。*
+*Objective-C 语言使用的是动态绑定的 message structure (消息结构) ，其运行时所执行的代码由运行环境来决定；无论多态，总是在运行时才会去检查对象的类型和查找所要执行的方法。*
 
 Objective-C 语言中的对象是用来指示对象的。
 
@@ -33,12 +31,12 @@ NSString * str = @"hello world";
 
 > **除非确有必要，否则不要引入头文件！使用前向声明！**
 
-解决办法：在类的头文件中使用`前向声明`提到的类。并在.m文件中引入那些类的头文件。
+解决办法：在类的头文件中使用`前向声明`提到的类。并在 .m 文件中引入那些类的头文件。
 
 好处：降低了类之间的耦合度，减少了编译时间，
 
 ```objc
-@class  XYJMyMenuTVC;    //前向声明语法
+@class  XYJMyMenuTVC;    // 前向声明语法
 ```
 *有时无法使用前向声明，比如要声明某个类遵循一项协议。此时，尽量把`该类遵循某协议`的声明已到`匿名类`中。如果不行的话，就把协议单独放在一个头文件中，然后将其引入。*
 
@@ -75,7 +73,7 @@ NSMutableString * strM = [@"hello" mutableCopy];
 NSMutableDictionary * dicM = [@{@"one":@"1"} mutableCopy];
 ```
 
-#### 第4条：多用类型常量，少用#define预处理指令
+#### 第4条：多用类型常量，少用 #define 预处理指令
 
 > * *不要用预处理指令定义常量。这样定义出来的常量不含类型信息，编译器只是会在编译前据此查找与替换操作。即使有人重新定义了常量值，编译器也不会产生警告信息，这将导致应用程序中的常量值不一致。*
 * *在实现文件中使用 `static const`  来定义 `只在编译单元内可见的常量`。由于此类常量不在全局符号表中，所以无须为其名称加前缀。*
@@ -109,7 +107,7 @@ NSString * const XYJLoginManagerDidLoginNotification = @"XYJLoginManagerDidLogin
 
 >* *应该用枚举来表示状态机的状态、传递给方法的选项以及状态码等值，给这些值起个易懂的名字吧。*
 * *如果把传递给某个方法的选项表示为枚举类型，而多个选项又可同时使用，那么就将各选项值定义为 2 的幂，以便通过按位或操作将其组合起来。*
-* *用 NS_ENUM与NS_OPTIONS 宏来定义枚举类型，并指明底层数据类型。这样做可以确保枚举是用开发者所选的底层数据类型实现出来的，而不会采用编译器所选的类型。*
+* *用 NS_ENUM 与 NS_OPTIONS 宏来定义枚举类型，并指明底层数据类型。这样做可以确保枚举是用开发者所选的底层数据类型实现出来的，而不会采用编译器所选的类型。*
 * *在处理枚举类型的 switch 语句中不要实现 default 分支，这样的话，加入新枚举之后，编译器就会提示开发者：switch 语句并未处理所有枚举。*
 
 **凡是需要以 按位或 操作来组合的枚举都应使用 NS_OPTIONS 定义，若是枚举不需要互相组合，则应使用 NS_ENUM 来定义**
@@ -140,7 +138,7 @@ typedef NS_OPTIONS(NSUInteger, PermittedDirection){
 
 #### 第6条：理解属性这一概念
 
-> * *可以用@property语法来定义对象中所封装的数据。*
+> * *可以用 @property 语法来定义对象中所封装的数据。*
 * *通过 “attribute（特质)” 来指定存储数据所需的正确语义*。
 * *在设置属性所对应的实例变量时，一定要遵从该属性所声明的语义*。
 * *开发 iOS 程序时应该使用 noatomic 属性，因为 atomic 属性会严重影响性能*。
@@ -187,7 +185,7 @@ typedef NS_OPTIONS(NSUInteger, PermittedDirection){
 * *不要盲目地逐个检测每条属性，而是依照具体需求来制定检测方案。*
 * *编写 hash 方法时，应该使用计算速度快而且哈希码碰撞几率低的算法。*
 
-#### 第9条：以“类族模式” 隐藏实现细节
+#### 第9条：用 “类族模式” 隐藏实现细节
 
 > * *类族模式可以把实现细节隐藏在一套简单的公共接口后面。*
 * *系统框架中经常使用类族。*
@@ -322,7 +320,7 @@ method_exchangeImplementations(originalMethod, swappedMethod);
 @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"这里写异常原因" userInfo:nil];
 ```
 
-#### 第17条：实现description方法
+#### 第17条：实现 description 方法
 
 > * 实现 description 方法返回一个有意义的字符串，用以描述该实例。
 
@@ -452,7 +450,7 @@ method_exchangeImplementations(originalMethod, swappedMethod);
 > * 不要单用一个下划线做私有方法的前缀，因为这种做法是预留给苹果公司用的。
 
 
-#### 第21条：理解Objective-C错误类型
+#### 第21条：理解 Objective-C 错误类型
 
 > * 只有发生了可使整个应用程序崩溃的严重错误时，才应使用`异常`。
 > * 在错误不那么严重的情况下，可以指派`委托方法` (delegate method) 来处理错误，也可以把错误对象放到 `NSError` 对象里，经由`输出参数`返回给调用者。
@@ -529,7 +527,7 @@ method_exchangeImplementations(originalMethod, swappedMethod);
 > * 把封装数据所用的全部属性都定义在主接口里。
 > * 在“ class-continuation 分类”之外的其他分类中，可以定义存取方法，但尽量不要定义属性。
 
-#### 第27条：使用“class-continuation分类”隐藏实现细节
+#### 第27条：使用 “class-continuation 分类” 隐藏实现细节
 
 > * 通过 `class-continuation 分类`向类中新增实例变量。
 > * 如果某属性在主接口中声明为 `readonly` ，而类的内部又要用设置方法修改此属性，那么就在 `class-continuation分类` 中将其扩展为 `readwrite`。
@@ -550,7 +548,7 @@ method_exchangeImplementations(originalMethod, swappedMethod);
 *autorelease 能延长对象生命周期，使其在跨越方法调用边界后依然可以存活一段时间。*
 
 
-#### 第30条：以ARC简化引用计数
+#### 第30条：用ARC简化引用计数
 
 
 > * 有 ARC 之后，程序员就无需担心内存管理问题了。使用 ARC 来编程，可省去类中的许多“样板代码”。
@@ -566,14 +564,14 @@ method_exchangeImplementations(originalMethod, swappedMethod);
 > * 执行异步任务的方法不应在 dealloc 方法里调用；只能在正常状态下执行的那些方法也不应在 dealloc 里调用，因为此时对象已处于正在回收的状态了。
 
 
-#### 第32条：编写“异常安全代码”时留意内存管理问题
+#### 第32条：编写 “异常安全代码” 时留意内存管理问题
 
 > * 捕获异常时，一定要注意将 try 块内所创立的对象清理干净。
 > * 在默认情况下，ARC 不生成安全处理异常所需的清理代码。开启编译器标志后，可以生成这种代码，不过会导致应用程序变大，而且降低运行效率。
 
 *若使用ARC且必须捕获异常，则需打开编译器的 `-fobjc-arc-exceptions` 标志。*
 
-#### 第33条：以若引用避免保留环
+#### 第33条：用弱引用避免保留环
 
 > * 将某些应用设为 weak，可避免出现“保留环”。
 > * weak 引用可以自动清空，也可以不自动清空。自动清空（ autoniling） 是随着 ARC 而引入的新特性，由运行期系统来实现。在具备自动清空功能的弱引用上，可以随意读取其数据，因为这种引用不会指向已经回收过的对象。
@@ -581,7 +579,7 @@ method_exchangeImplementations(originalMethod, swappedMethod);
 *`unsafe_unretained` 一词表明，属性值可能不安全，而且不归此实例所拥有。*
 *`weak` 和 `unsafe_unretained`  的作用一样，唯一的不同是，只要系统把属性回收，属性值就会自动设置为 nil。但是 `unsafe_unretained ` 属性仍然指向那个已经回收的实例。*
 
-#### 第34条：以“自动释放池”降低内存峰值
+#### 第34条：用 “自动释放池” 降低内存峰值
 
 > * 自动释放池排布在栈中，对象收到 autorelease 消息后，系统将其放入最顶端的池里。
 > * 合理运用释放池，可降低应用程序的内存峰值。
@@ -591,17 +589,17 @@ method_exchangeImplementations(originalMethod, swappedMethod);
 
 *内存峰值 （high-memory waterline） 是指应用程序在某个特定时间段内的最大内存用量 （highest memory footprint）。*
 
-#### 第35条：用“僵尸对象”调试内存管理问题
+#### 第35条：用 “僵尸对象” 调试内存管理问题
 
 > * 系统在回收对象时，可以不将其真的回收，而是把它转化为僵尸对象。通过环境变量 NSZombieEnabled 可开启此功能。
 > * 系统会修改对象的 isa 指针，令其指向特殊的僵尸类，从而使该对象变为僵尸对象。僵尸类能够响应所有的选择子，响应方式为：打印一条包含消息内容及其接收者的消息，然后终止应用程序。
 
-#### 第36条：不要使用retainCount
+#### 第36条：不要使用 retainCount
 
 > * 对象的保留计数看似有用，实则不然，因为任何给定时间点上的”绝对保留计数”（absolute retain count）都无法反应对象生命期的全貌。
 > * 引入 ARC 之后，retainCount 方法就正式废止了，在 ARC 下调用该方法会导致编译器报错。
 
-#### 第37条：理解Block这一概念
+#### 第37条：理解 Block 这一概念
 
 > * 块是 C、C++、Objective-C 中的词法闭包。
 > * 块可接收参数，也可返回值。
@@ -623,7 +621,7 @@ int (^addBlock) (int a, int b) = ^(int a, int b) {
 
 *块的强大之处：在声明它的范围内，所有变量都可以为其捕获。如果要修改捕获的变量，那么，声明变量的时候需要加上 `__block` 关键词。*
 
-#### 第38条：为常用的Block类型创建typedef
+#### 第38条：为常用的 Block 类型创建 typedef
 
 > * 以 typedef 重新定义块类型，可令块变量用起来更加简单。
 > * 定义新类型时应遵守现有的命名习惯，勿使其名称与别的类型相冲突。
@@ -641,7 +639,7 @@ typedef double NSTimeInterval;
 typedef int (^XYJSomeBlock) (BOOL flag, int value);
 ```
 
-#### 第39条：用handle块降低代码分散程度
+#### 第39条：用 handle 块降低代码分散程度
 
 > - 在创建对象时，可以使用内联的 handle 块将相关逻辑一并声明。
 > - 在有多个实例需要监控时，如果采用委托模式，那么经常需要根据传入的对象来切换，而若改用 handle 块来实现，则可直接将块与相关对象放在一起。
@@ -684,7 +682,7 @@ typedef int (^XYJSomeBlock) (BOOL flag, int value);
 > * 1、一系列任务可归入一个 dispatch group 之中。开发者可以在这组任务执行完毕时获得通知。
 * 2、通过 dispatch group，可以在并发式派发队列里同时执行多项任务。此时GCD会根据系统资源状况来调度这些并发执行的任务。开发者若自己来实现此功能，则需编写大量代码。
 
-#### 第45条：使用dispatch_once来执行只需运行一次的线程安全代码
+#### 第45条：使用 dispatch_once 来执行只需运行一次的线程安全代码
 
 > * 1、经常需要编写“只需执行一次的线程安全的代码”（thread-safe single-code execution）。通过GCD 所提供的 `dispatch_once` 函数，很容易就能实现此功能。
 > * 2、标记应该声明在 static 或 global 作用域中，这样的话，在把只需执行一次的块传给`dispatch_once` 函数时，传进去的标记也是相同的。
@@ -705,7 +703,7 @@ typedef int (^XYJSomeBlock) (BOOL flag, int value);
 }
 ```
 
-#### 第46条：不要使用dispatch_get_current_queue
+#### 第46条：不要使用 dispatch_get_current_queue
 
 > * `dispatch_get_current_queue` 函数的行为常常与开发者所预期的不同。此函数已经废弃，只应做调试只用。
 > * 由于派发队列是按层级来组织的，所以无法单用某个队列对象来描述“当前队列这一概念”。
@@ -878,7 +876,7 @@ NSSet * aSet = /* ... */;
 }];
 ```
 
-#### 第49条：对自定义其内存管理语义的collection使用无缝桥接（toll-free bridging）
+#### 第49条：对自定义其内存管理语义的 collection 使用无缝桥接（toll-free bridging）
 
 > * 通过无缝桥接技术，可以在 Foundation 框架中的 Objective-C 对象与 CoreFoundation 框架中的 C 语言结构之间来回转换。
 > * 在 CoreFoundation 层面创建 collection 时，可以指定许多回调函数，这些函数表示此 collection 应如何处理其元素。然后，可运用无缝桥接技术，将其转换成具备特殊内容管理语义的 Objective-C collection。
