@@ -1,34 +1,55 @@
 ### Head First Design Pattern
 
-> 学好用好设计模式的方法：多观察、多总结、多思考、多实践。
+> 
 
 #### Design Principle
 
-- Identify the aspects of your application that vary and separate them from what stays the same. (*找出应用中可能需要变化之处，把它们独立出来，不要和那些不需要变化的代码混在一起。*)
+- Identify the aspects of your application that vary and separate them from what stays the same. 
 
-- Program to an interface, not an implementation.（*针对接口编程，而不是针对实现编程。*）
+- Program to an interface, not an implementation.
 
-- Favor composition over inheritance. (*多用组合，少用继承。*)
+- Favor composition over inheritance. 
 
-- Strive for loosely coupled designs between objects that interact. (*为了交互对象之间的松耦合设计而努力。*)
+- Strive for loosely coupled designs between objects that interact. 
 
-- Classes should be open for extension, but closed for modification. (*类应该对扩展开放，对修改关闭。*)
+- Classes should be open for extension, but closed for modification.
 
-- Depend upon abstraction. Do not depend upon concrete classes.（*要依赖抽象，不要依赖具体类。*）
+- Depend upon abstraction. Do not depend upon concrete classes.
 
-- Principle of Least Knowledge-talk only to your immediate friends. (*最少知识原则，只和你的密友谈话。*)
+- Principle of Least Knowledge-talk only to your immediate friends.
 
-- Don't call us, we'll call you.(*别调用我们，我们会调用你。*)
+- Don't call us, we'll call you.
 
-- A class should have only one reason to change. (*一个类应该只有一个引起变化的原因。*)
+- A class should have only one reason to change.
+
+#### SOLID
+
+##### Single responsibility principle
+
+> A class or modules should have one, and only one, reason to be changed.
+
+##### Open closed principle
+
+> Software entities(classes, modules, functions, etc.) should be open for extension, but closed for modification.
+
+##### Liskov substitution principle
+
+> Objects should be replaceable with instances of their subtypes without altering the correctness of that program.
+
+##### Interface segregation principle
+
+> Clients should not be forced to depend on methods that they do not use.
+
+#####  Dependency Inversion principle
+
+> A. High level modules should not depend upon low level modules. Both should depend upon abstractions.
+> 
+> B. Abstractions should not depend upon details. Details should depend upon abstractions.
 
 
-#### 设计模式
 
-#### 工厂模式
 
-简单工厂不是一个设计模式，比较像是一种编程习惯。
 
-静态工厂  缺点：不能通过继承来改变创建方法的行为。
+
 
 
