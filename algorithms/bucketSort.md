@@ -1,6 +1,59 @@
+### 算法实现
+
+用 Swift 实现的算法如下：
+
+```swift
+func bucketSort(unsortedArray: [Int]) -> [Int]{
+    if unsortedArray.count < 2 {
+        return unsortedArray
+    }
+    // Find max and min value.
+    var minValue = unsortedArray[0]
+    var maxValue = unsortedArray[0]
+    for element in unsortedArray {
+        if element > maxValue {
+            maxValue = element
+        }
+        if element < minValue {
+            minValue = element
+        }
+    }
+    
+    // Add elelment to buckets
+    let bucketCount = 3
+    var buckets = [[Int]]()
+    for _ in 0..<bucketCount {
+        buckets.append([Int]())
+    }
+    let intervalValue = Double(maxValue - minValue+1)/Double(bucketCount)
+    for element in unsortedArray {
+        let bucketIndex = Int(Double(element-minValue)/intervalValue)
+        insertValueToBucket(bucket: &buckets[bucketIndex], value: element)
+    }
+    
+    // Create array from bucket.
+    var sortedArray = [Int]()
+    for element in buckets {
+        sortedArray.append(contentsOf: element)
+    }
+    return sortedArray
+}
+    
+func insertValueToBucket(bucket: inout [Int], value: Int) {
+    bucket.append(value)
+    var index = bucket.count-1;
+    while index-1 >= 0 {
+        if bucket[index] < bucket[index-1] {
+            bucket.swapAt(index, index-1)
+        }
+        index -= 1
+    }
+}
+```
+
 用 Objective-C 实现的算法如下：
 
-```objc
+```objc
 - (NSArray*)bucketSort:(NSArray*) unsorted {
     if (unsorted.count < 2) {
         return unsorted;
@@ -45,4 +98,15 @@
         }
     }
 }
+```
+
+### 算法验证
+
+```swift
+let list = [21, 5, 322, 10, 623, 7111, 42, 56]
+// 将会打印 [21, 5, 322, 10, 623, 7111, 42, 56]
+print(list)
+let list1 = bucketSort(unsortedArray: list)
+// 将会打印 [5, 10, 21, 42, 56, 322, 623, 7111]
+print(list1)
 ```
