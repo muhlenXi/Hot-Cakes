@@ -23,7 +23,7 @@ func heapfy(tree: inout [Int], n: Int, i: Int) {
     }
 }
 
-func buildHeap(tree: inout [Int]) {
+func buildMaxHeap(tree: inout [Int]) {
     var parent = (tree.count-1-1)/2
     while parent >= 0 {
         heapfy(tree: &tree, n: tree.count, i: parent)
@@ -33,7 +33,7 @@ func buildHeap(tree: inout [Int]) {
 
 
 func heapSort(tree: inout [Int]) {
-    buildHeap(tree: &tree)
+    buildMaxHeap(tree: &tree)
     var last = tree.count-1
     while last >= 0 {
         tree.swapAt(0, last)
