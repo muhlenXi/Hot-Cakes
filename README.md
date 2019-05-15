@@ -44,10 +44,10 @@
 - [希尔排序](/algorithms/shellSort.md) `Swift` `Objective-C`
 - [快速排序](/algorithms/quickSort.md) `Swift` `Objective-C`
 - [归并排序](/algorithms/mergeSort.md) `Swift` `Objective-C`
-- [堆排序](/algorithms/heapsort.md) 
-- [计数排序](/algorithms/countingSort.md)
-- [桶排序](/algorithms/bucketSort.md)
-- [基数排序](/algorithms/radixSort.md)
+- [堆排序](/algorithms/heapsort.md) `Swift` `Objective-C` 
+- [计数排序](/algorithms/countingSort.md) `Swift` `Objective-C`
+- [桶排序](/algorithms/bucketSort.md) `Swift` `Objective-C`
+- [基数排序](/algorithms/radixSort.md) `Swift` `Objective-C`
 
 ### 读书笔记
 
