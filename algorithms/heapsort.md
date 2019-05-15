@@ -43,6 +43,55 @@ func heapSort(tree: inout [Int]) {
 }
 ```
 
+用 Objective-C 实现的算法如下：
+
+```objc
+- (void)heapSort:(NSMutableArray *) tree {
+    [self buidMaxHeap:tree];
+    NSInteger last = tree.count-1;
+    while (last >= 0) {
+        [self swap:tree i:0 j:last];
+        [self heapfy:tree n:last i:0];
+        last--;
+    }
+}
+
+- (void)buidMaxHeap:(NSMutableArray *) tree {
+    NSInteger parent = (tree.count-1-1)/2;
+    while (parent >= 0) {
+        [self heapfy:tree n:tree.count i:parent];
+        parent--;
+    }
+}
+
+- (void)heapfy:(NSMutableArray *)tree n:(NSInteger)n i:(NSInteger)i {
+    if (i >= n) {
+        return;
+    }
+    
+    NSInteger max = i;
+    NSInteger c1 = i * 2 + 1;
+    NSInteger c2 = i * 2 + 2;
+    
+    if (c1 < n && [tree[c1] integerValue] > [tree[max] integerValue]) {
+        max = c1;
+    }
+    if (c2 < n && [tree[c2] integerValue] > [tree[max] integerValue]) {
+        max = c2;
+    }
+    if (max != i) {
+        [self swap:tree i:max j:i];
+        [self heapfy:tree n:n i:max];
+    }
+}
+
+- (void)swap:(NSMutableArray *)array i:(NSInteger)i j:(NSInteger)j {
+    NSNumber *temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+```
+
 ### 算法验证
 
 ```swift
