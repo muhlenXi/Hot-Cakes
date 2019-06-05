@@ -26,6 +26,7 @@
 - 6、 [CocoaPods 使用小记](/ide/CocoaPods-skills.md)
 - 7、[RubyGems 使用小记](/ide/Gem-skills.md)
 - 8、[Terminal 使用小记](/ide/Terminal-skill.md)
+- 9、[Generamba](/ide/generamba.md)
 
 ### 基础知识
 
