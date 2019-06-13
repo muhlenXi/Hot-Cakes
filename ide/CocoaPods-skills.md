@@ -2,6 +2,7 @@
 
 | Shortcut Keys | description |
 | :--------- | :---------- |
+|pod trunk register 邮箱 '用户名' --description='描述信息'||
 | pod trunk me |  查看自己的 CocoaPods 信息  |
 | pod lib lint BaymaxKit.podspec | 检查 lib lint |
 | pod trunk push BaymaxKit.podspec --allow-warnings| 发布 podspec 到 CocoaPods|
