@@ -2,10 +2,10 @@
 
 | Shortcut Keys | description |
 | :--------- | :---------- |
-|pod trunk register 邮箱 '用户名' --description='描述信息'||
+|pod trunk register 邮箱 '用户名' --description='描述信息'|注册 pod|
 | pod trunk me |  查看自己的 CocoaPods 信息  |
-| pod lib lint BaymaxKit.podspec | 检查 lib lint |
-| pod trunk push BaymaxKit.podspec --allow-warnings| 发布 podspec 到 CocoaPods|
+| pod lib lint PineappleKit.podspec | 检查 lib lint |
+| pod trunk push PineappleKit.podspec --allow-warnings| 发布 podspec 到 CocoaPods|
 | pod repo update | 更新本地  CocoaPods 的 spec 资源配置信息仓库|
 | gem list --local \| grep cocoapods  | 查看安装的CocoaPods相关东西 |
 | sudo gem uninstall cocoapods-core  | 卸载CocoaPods相关东西 |
