@@ -103,8 +103,8 @@
 ### 功能 demo / 代码块
 
 - 0、 [NSDateFormatter格式化参数](https://gist.github.com/muhlenXi/e9a506d2b0a94bdc1438a58994216374)
-- 1、[UIImage 的一些用法](/Files/UIImage.md)
-- 2、[Swift 访问权限控制](/Files/Swift-Access-Control.md)
+- 1、[UIImage 的一些用法](/article/UIImage.md)
+- 2、[Swift 访问权限控制](/article/Swift-Access-Control.md)
 - 3、[如何获取 URL 查询参数/根据查询参数构建 URL](https://gist.github.com/muhlenXi/fa0f281b88372d2486e9c107a8b011ca) 
 - 4、[检查设备的相机/相册访问权限](https://gist.github.com/muhlenXi/f6baa6352aea7455758032b61f9b78df) 
 - 5、[如何播放系统提示音/震动？](https://gist.github.com/muhlenXi/d8f04184950db3a459b099664b401a79)
