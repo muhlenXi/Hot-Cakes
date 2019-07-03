@@ -15,6 +15,7 @@
 | gem list --local \| grep cocoapods  | 查看安装的CocoaPods相关东西 |
 | sudo gem uninstall cocoapods-core  | 卸载CocoaPods相关东西 |
 | sudo gem install -n /usr/local/bin cocoapods  | 安装CocoaPods |
+| sudo gem install cocoapods --version 1.6.1| 安装指定版本 CocoaPods |
 | pod install --verbose --no-repo-update | 安装库和依赖 |
 | pod init  | 生成默认的 Podfile配置文件 |
 | pod search 库名|搜索第三方库|
