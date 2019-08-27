@@ -1,8 +1,8 @@
-## 摘要
+## Remark
 
 一切成就源于实践和积累，功到自然成。与君共勉！
 
-## 自我介绍
+## About me
 
 大家好，我是 muhlenXi,  欢迎到我的 [技术博客](http://www.muhlenxi.com) 拍砖。
 
@@ -13,9 +13,13 @@
 	- Email：<muhlenxi@gmail.com>
 - 如果你在阅读的过程中发现有错误的地方，可以通过 issue 进行指正。
 
-## 正文
+## Summary list
 
-### 开发工具
+### 今日收获记录
+
+- [What have you learned today?](/What-have-you-learned-today)
+
+### Develop tools
 
 - 0、[Xcode 使用小记](/ide/Xcode-skills.md)
 - 1、 [Vim 使用小记](/ide/vim-skills.md) 
@@ -28,16 +32,16 @@
 - 8、[Terminal 使用小记](/ide/Terminal-skill.md)
 - 9、[Generamba](/ide/generamba.md)
 
-### 基础知识
+### Basics
 
 - [第 0 篇](/knowledge/knowledge-points.md)
 
-### 经验
+### Experience
 
 - [iOS 开发技巧之 UI篇](/tuiqiaoNote/UserInterface.md)
 - [iOS 开发技巧之 业务篇](/tuiqiaoNote/Business.md)
 
-### 算法
+### Algorithm
 
 - [冒泡排序](/algorithms/bubbleSort.md) `Swift` `Objective-C`
 - [选择排序](/algorithms/selectionSort.md)  `Swift` `Objective-C`
@@ -50,7 +54,7 @@
 - [桶排序](/algorithms/bucketSort.md) `Swift` `Objective-C`
 - [基数排序](/algorithms/radixSort.md) `Swift` `Objective-C`
 
-### 读书笔记
+### Book notes
 
 -  [程序员修炼之道](/books/The-Pragmatic-Programmer.md) 
 - [Swift开发者必备Tips](/books/Swift-Tips.md)
@@ -60,7 +64,7 @@
 - [网络是怎样连接的](/books/How-is-the-network-connected.md)
 - [如何阅读一本书](/books/How-to-read-a-book.md)
 
-### 原创文章
+### Article
 
 - 0、 [与小米手环 2 进行数据交互](/article/iOS-Bluetooth-Low-Energy-Develop-Chapter7.md) 
 - 1、 [ BLE 外设（Peripheral）自动重连机制的逻辑梳理](/article/About-Ble-Auto-Connecting.md) 
@@ -90,7 +94,7 @@
 - 25、 [关于 UIKit](/article/About-UIKit.md)
 - 26、 [关于 Swift Standard Library](/article/About-SwiftStandardLibrary.md)
 
-### 翻译文章
+### Translation
 
 - 0、 [当你开始学习编程时，你最希望知道什么？](/translations/Quora_27things.md) 
 - 1、 [iOS BLE 开发小记[1] - CoreBluetooth 是什么?](/translations/iOS-Bluetooth-Low-Energy-Develop-Chapter1.md) 
@@ -124,6 +128,6 @@
 - 19、[一个 UICollectionView 的应用 demo](https://gist.github.com/muhlenXi/60a9be0eaddf0636869de6929ee593d4)
 - 20、 [一个简单收货地址选择器的 demo](https://gist.github.com/muhlenXi/6d32966d5fc5602478b3ab4eea784846)
 
-## 后记
+## Afterword
 
 不定时更新中，编码不易，且行且珍惜。
