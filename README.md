@@ -15,7 +15,7 @@
 
 ## Summary list
 
-### 今日收获记录
+### No pain, no gain.
 
 - [What have you learned today?](/What-have-you-learned-today)
 
@@ -104,7 +104,7 @@
 - 5、 [iOS BLE 开发小记[5] - 与 Remote Peripheral 交互的最佳实践](/translations/iOS-Bluetooth-Low-Energy-Develop-Chapter5.md) 
 - 6、 [iOS BLE 开发小记[6] - 设置本地设备为 Peripheral 的最佳实践](/translations/iOS-Bluetooth-Low-Energy-Develop-Chapter6.md) 
 
-### 功能 demo / 代码块
+### Demo
 
 - 0、 [NSDateFormatter格式化参数](https://gist.github.com/muhlenXi/e9a506d2b0a94bdc1438a58994216374)
 - 1、[UIImage 的一些用法](/article/UIImage.md)
