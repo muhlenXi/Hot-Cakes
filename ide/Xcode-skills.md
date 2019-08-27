@@ -1,6 +1,12 @@
-### Xcode skills
+## Xcode skills
+
+- [Apple Xcode 官方帮助文档](https://help.apple.com/xcode/mac/current/#/devc8c2a6be1)
 
 > 本文记录的是 Xcode 软件的使用技巧。
+
+### Note
+
+-  To open the Archives organizer, choose Window > Organizer, then click Archives.
 
 ## Xcode 快捷键 
 
