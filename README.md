@@ -31,10 +31,12 @@
 - 7、[RubyGems 使用小记](/ide/Gem-skills.md)
 - 8、[Terminal 使用小记](/ide/Terminal-skill.md)
 - 9、[Generamba](/ide/generamba.md)
+- 10、[My SQL](/Java/sql.md)
 
 ### Basics
 
 - [第 0 篇](/knowledge/knowledge-points.md)
+- [Java](/Java/java-lesson.md)
 
 ### Experience
 
@@ -63,6 +65,8 @@
 - [Head First Design Patterns](/books/Head-First-Design-Patterns.md)
 - [网络是怎样连接的](/books/How-is-the-network-connected.md)
 - [如何阅读一本书](/books/How-to-read-a-book.md)
+- [Thinking in Java](/Java/thinking-in-java)
+- [Core Java](/Java/core-java)
 
 ### Article
 
