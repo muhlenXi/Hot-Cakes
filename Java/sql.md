@@ -140,6 +140,15 @@ ALTER TABLE school MODIFY school_name VARCHAR(50);
 -- 唯一性约束
 ALTER TABLE school MODIFY school_name VARCHAR(50) UNIQUE;
 ALTER TABLE school DROP INDEX school_name;
+
+-- 外键约束
+ALTER TABLE student ADD CONSTRAINT student_school_fk 
+	FOREIGN KEY (school_id) REFERENCES school(school_id)
+	ON UPDATE CASCADE ON DELETE CASCADE;
+	-- 级联更新 ON UPDATE CASCADE
+	-- 级联删除 ON DELETE CASCADE
+
+ALTER TABLE student DROP FOREIGN KEY student_school_fk;
 ```
 
 2-9、获取某一列的描述信息
