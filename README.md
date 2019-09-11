@@ -31,30 +31,26 @@
 - 7、[RubyGems 使用小记](/ide/Gem-skills.md)
 - 8、[Terminal 使用小记](/ide/Terminal-skill.md)
 - 9、[Generamba](/ide/generamba.md)
-- 10、[My SQL](/Java/sql.md)
+- 10、[MySQL cheat sheet](https://github.com/muhlenXi-Team/mysql-cheat-sheet)
 
 ### Basics
 
-- [第 0 篇](/knowledge/knowledge-points.md)
-- [Java](/Java/java-lesson.md)
+- [Objective-C](/knowledge/oc-basics.md)
+- [Swift](/knowledge/swift-basics.md)
+- [Java](/knowledge/java-basics.md)
 
 ### Experience
 
-- [iOS 开发技巧之 UI篇](/tuiqiaoNote/UserInterface.md)
-- [iOS 开发技巧之 业务篇](/tuiqiaoNote/Business.md)
+- [iOS UI篇](/tuiqiaoNote/UserInterface.md)
+- [iOS 业务篇](/tuiqiaoNote/Business.md)
 
 ### Algorithm
 
-- [冒泡排序](/algorithms/bubbleSort.md) `Swift` `Objective-C`
-- [选择排序](/algorithms/selectionSort.md)  `Swift` `Objective-C`
-- [插入排序](/algorithms/insertionSort.md) `Swift` `Objective-C`
-- [希尔排序](/algorithms/shellSort.md) `Swift` `Objective-C`
-- [快速排序](/algorithms/quickSort.md) `Swift` `Objective-C`
-- [归并排序](/algorithms/mergeSort.md) `Swift` `Objective-C`
-- [堆排序](/algorithms/heapsort.md) `Swift` `Objective-C` 
-- [计数排序](/algorithms/countingSort.md) `Swift` `Objective-C`
-- [桶排序](/algorithms/bucketSort.md) `Swift` `Objective-C`
-- [基数排序](/algorithms/radixSort.md) `Swift` `Objective-C`
+- [algorithm list](https://github.com/muhlenXi/algorithm)
+
+### Design pattern
+
+- [design pattern list](https://github.com/muhlenXi/design-patterns)
 
 ### Book notes
 
@@ -65,8 +61,8 @@
 - [Head First Design Patterns](/books/Head-First-Design-Patterns.md)
 - [网络是怎样连接的](/books/How-is-the-network-connected.md)
 - [如何阅读一本书](/books/How-to-read-a-book.md)
-- [Thinking in Java](/Java/thinking-in-java)
-- [Core Java](/Java/core-java)
+- [Thinking in Java](/books/thinking-in-java.md)
+- [Core Java](/books/core-java.md)
 
 ### Article
 
