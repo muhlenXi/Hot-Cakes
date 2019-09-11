@@ -51,6 +51,7 @@ SYSTEM CLEAR;
 
 ```sql
 EXIT;
+QUIT;
 ```
 
 1-8、查看当前数据库所有表
@@ -64,15 +65,15 @@ SHOW TABLES;
 2-1、创建表
 
 ```sql
-CREATE TABLE IF NOT EXISTS student(id int);
-
-CREATE TABLE IF NOT EXISTS t1
+CREATE TABLE IF NOT EXISTS student
 (
 	id INT PRIMARY KEY,
 	name VARCHAR(50) NOT NULL,
-	number VARCHAR(30) UNIQUE,
-	height DOUBLE NULL,
-	add_time TIMESTAMP DEFAULT NOW()
+	age INT,
+	add_time TIMESTAMP DEFAULT NOW(),
+	math INT,
+	english INT,
+	school_id INT
 );
 ```
 
@@ -130,8 +131,8 @@ ALTER TABLE table_name ADD PRIMARY KEY (column);
 ALTER TABLE table_name DROP PRIMARY KEY;
 
 -- 主键自动增长
-ALTER TABLE stu MODIFY id INT AUTO_INCREMENT;
-ALTER TABLE stu MODIFY id INT;
+ALTER TABLE student MODIFY id INT AUTO_INCREMENT;
+ALTER TABLE student MODIFY id INT;
 
 -- 非空约束
 ALTER TABLE school MODIFY school_name VARCHAR(50) NOT NULL;
@@ -151,10 +152,17 @@ ALTER TABLE student ADD CONSTRAINT student_school_fk
 ALTER TABLE student DROP FOREIGN KEY student_school_fk;
 ```
 
-2-9、获取某一列的描述信息
+2-9、获取表的描述信息
 
 ```sql
-DESCRIBE table_name column;
+DESC table_name;
+```
+
+2-10、获取某一列的描述信息
+
+```sql
+-- DESCRIBE table_name column;
+DESCRIBE student name;
 ```
 
 ##  3、表内记录操作
@@ -162,7 +170,7 @@ DESCRIBE table_name column;
 3-1、插入数据
 
 ```sql
-INSERT INTO student (id, name) VALUES (1, "zhangsan");
+INSERT INTO student (id, name) VALUES (3, "zhangsan"),(4, "lisi");
 
 -- 插入查询数据
 INSERT INTO student(id, name, gender, age, addTime, math, english, school_id)
@@ -258,3 +266,108 @@ SELECT name FROM student;  -- 这是一条注释
 | 多对多 | 需要借助中间表，中间表至少包含两列，这两列作为中间表的外键，分别指向两张表的主键。 |
 | 一对一 | 在任意一张表添加唯一外键指向另一方的外键。 |
 
+## 5、数据库权限管理
+
+5-1、查询用户
+
+```sql
+USE mysql;
+SELECT * FROM user;
+```
+
+5-2、添加用户/删除用户
+
+```sql
+-- 添加用户
+-- CREATE USER '用户名'@'主机名' IDENTIFIED BY '密码';
+CREATE USER 'xiyinjun'@'localhost' IDENTIFIED BY '123456';
+
+-- 删除用户
+-- DROP USER ‘username’@‘localhost’;
+DROP USER 'xiyinjun'@'localhost';
+```
+
+5-3、授权用户/取消用户授权
+
+```sql
+-- 授权用户
+-- GRANT type_of_permission ON database_name.table_name TO ‘username’@'localhost’;
+GRANT ALL PRIVILEGES ON *.* TO 'xiyinjun'@'localhost';
+
+-- 取消授权用户
+-- REVOKE type_of_permission ON database_name.table_name FROM ‘username’@‘localhost’;
+REVOKE ALL PRIVILEGES ON *.* FROM 'xiyinjun'@'localhost';
+
+-- 刷新授权
+FLUSH PRIVILEGES;
+```
+
+## 6、数据库备份与还原
+
+6-1、导出数据库
+
+*直接在 Terminal 中操作*
+
+```shell
+# mysqldump -u 用户名 -p 数据库名 > 导出的地址/导出的文件名
+mysqldump -uroot -p talent > '/Users/muhlenxi/Desktop/talent.sql'
+```
+
+6-2、导入数据库
+
+*前提是需要登录上 MySQL 数据库*
+
+```sql
+CREATE DATABASE name;
+USE name;
+SOURCE /Users/muhlenxi/Desktop/talent.sql;
+```
+
+## 7、事务与隔离
+
+事务的四大特性：
+
+- Atomicity 原子性
+- Consistency 一致性
+- Isolation 隔离性
+- Durability 持久性
+
+```sql
+-- 开启事务
+START TRANSACTION;
+UPDATE bank SET account=account-500 WHERE name='zhangsan';
+UPDATE bank SET account=account+500 WHERE name='lisi';
+
+-- 事务提交
+COMMIT;
+
+-- 事务回滚
+ROLLBACK;
+
+-- 查看事务提交方式
+SELECT @@autocommit;
+
+-- 修改事务提交方式 1-自动 0-手动
+SET @@autocommit=0;
+```
+
+隔离原因: 
+
+- 脏读
+- 不可重复读
+- 幻读
+
+```sql
+-- 查看事务隔离级别
+SELECT @@transaction_isolation;
+
+-- 设置事务隔离级别
+-- RU
+SET GLOBAL TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+-- RC
+SET GLOBAL TRANSACTION ISOLATION LEVEL READ COMMITTED;
+-- RR
+SET GLOBAL TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+-- S
+SET GLOBAL TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+```
