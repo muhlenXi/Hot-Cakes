@@ -123,10 +123,11 @@
 - 14、[通过 Calendar 计算今年几岁？](https://gist.github.com/muhlenXi/fd74fee2d418971ddb42a67397b95c02)
 - 15、[如何对对象进行序列化和反序列化？](https://gist.github.com/muhlenXi/5461013488f5c33cfc7e6adf21123557)
 - 16、[如何给 View 添加阴影效果？](https://gist.github.com/muhlenXi/f05e49eb66286ef4e93815f8b30ac4d7)
--  17、[判断当前设备时间是否是12小时制？](https://gist.github.com/muhlenXi/dcd4ead464270278f5726e211ecacbde)
+- 17、[判断当前设备时间是否是12小时制？](https://gist.github.com/muhlenXi/dcd4ead464270278f5726e211ecacbde)
 - 18、[一个 tableView 显示、编辑、删除的 demo](https://gist.github.com/muhlenXi/12cd17d87f782174f275af7fb4661c15)
 - 19、[一个 UICollectionView 的应用 demo](https://gist.github.com/muhlenXi/60a9be0eaddf0636869de6929ee593d4)
-- 20、 [一个简单收货地址选择器的 demo](https://gist.github.com/muhlenXi/6d32966d5fc5602478b3ab4eea784846)
+- 20、[一个简单收货地址选择器的 demo](https://gist.github.com/muhlenXi/6d32966d5fc5602478b3ab4eea784846)
+- 21、[视频播放、编辑、裁剪](https://github.com/muhlenXi-Team/video-edit-demo)
 
 ## Afterword
 
