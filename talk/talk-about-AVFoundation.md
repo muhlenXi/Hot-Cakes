@@ -82,11 +82,16 @@ AVURLAsset *anAssetToUseInAComposition = [[AVURLAsset alloc] initWithURL:url opt
 - animationTool 可以将一些  Core Animation framework 的动画效果添加到视频中。
 - AVAssetExportSession 最终将这些音轨、视频轨、配置数据 合并成一个新的 video。
 
-下图是一个简单的合并示意图：
+
+下图是一个简单的 export 示意图：
 
 ![](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/puttingitalltogether_2x.png)
 
-举个 demo 中拼接两个 video 的例子，我们需要经历以下几个过程：
+### 聊聊 Video 拼接
+
+举个 demo 中拼接两个 video 的例子，废话少说，直接上代码。
+
+我们需要经历以下几个过程：
 
 【1】生成 Composition 、音频轨、视频轨。
 
@@ -94,59 +99,63 @@ AVURLAsset *anAssetToUseInAComposition = [[AVURLAsset alloc] initWithURL:url opt
 // 创建可变集合对象 Composition
 AVMutableComposition *mutableComposition = [AVMutableComposition composition];
 
-// 创建视频轨对象 
-AVMutableCompositionTrack *mutableCompositionVideoTrack = [mutableComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+// 创建视频轨对象
+AVMutableCompositionTrack *videoCompositionTrack = [mutableComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
 
 // 创建音频轨对象
-AVMutableCompositionTrack *mutableCompositionAudioTrack = [mutableComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
+AVMutableCompositionTrack *audioCompositionTrack = [mutableComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
+
 ```
 
 【2】添加 Asset 中的视频轨数据、音频轨数据。
 
 ```objc
-// 构建 视频1 的 asset
-AVAsset *videoAsset = <#AVAsset with at least one video track#>;
-// 提取 视频1 中的视频轨数据
-AVAssetTrack *videoAssetTrack = [[videoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
-// 添加视频轨数据到 视频轨对象中
-[mutableCompositionVideoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero,videoAssetTrack.timeRange.duration) ofTrack:videoAssetTrack atTime:kCMTimeZero error:nil];
+// 构建 视频1 视频2 的 asset
+NSDictionary *opts = [NSDictionary dictionaryWithObject:@(YES) forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+AVURLAsset *firstVideoAsset = [[AVURLAsset alloc] initWithURL:firstVideoPath options:opts];
+AVURLAsset *secondVideoAsset = [[AVURLAsset alloc] initWithURL:secondVideoPath options:opts];
 
 
-// 同理构建 视频2 的 asset
-AVAsset *anotherVideoAsset = <#another AVAsset with at least one video track#>;
-// 提取 视频2 的视频轨数据
-AVAssetTrack *anotherVideoAssetTrack = [[anotherVideoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
-// 添加 视频2 的视频轨数据到 视频轨对象中
-[mutableCompositionVideoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero,anotherVideoAssetTrack.timeRange.duration) ofTrack:anotherVideoAssetTrack atTime:videoAssetTrack.timeRange.duration error:nil];
+// 提取 视频1 视频2 的视频轨数据
+AVAssetTrack *firstVideoAssetTrack = [[firstVideoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+AVAssetTrack *secondVideoAssetTrack = [[secondVideoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
 
-// 添加音频数据到 音频轨对象中
-[audioCompositionTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, CMTimeAdd(firstVideoAssetTrack.timeRange.duration, secondVideoAssetTrack.timeRange.duration)) ofTrack:[[audioAsset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0] atTime:kCMTimeZero error:nil];
+// 添加 视频1 视频2 的视频轨数据到 视频轨对象中
+[videoCompositionTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, firstVideoAssetTrack.timeRange.duration) ofTrack:firstVideoAssetTrack atTime:kCMTimeZero error:nil];
+[videoCompositionTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, secondVideoAssetTrack.timeRange.duration) ofTrack:secondVideoAssetTrack atTime:firstVideoAssetTrack.timeRange.duration error:nil];
+
+// 提取 视频1 视频2 的音频轨数据
+AVAssetTrack *firstVideoAudioTrack = [[firstVideoAsset tracksWithMediaType:AVMediaTypeAudio] firstObject];
+AVAssetTrack *secondVideoAudioTrack = [[secondVideoAsset tracksWithMediaType:AVMediaTypeAudio] firstObject];
+    
+// 添加 视频1 视频2 的音频轨数据到 音频轨对象中
+[audioCompositionTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, firstVideoAudioTrack.timeRange.duration) ofTrack:firstVideoAudioTrack atTime:kCMTimeZero error:nil];
+[audioCompositionTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, secondVideoAudioTrack.timeRange.duration) ofTrack:secondVideoAudioTrack atTime:firstVideoAssetTrack.timeRange.duration error:nil];
+
 ```
 
 【3】检查两个 video 的方向，方向不同的 video 不能拼接
 
 ```objc
-// 视频1 是否是人像方向
 BOOL isFirstVideoPortrait = NO;
 CGAffineTransform firstTransform = firstVideoAssetTrack.preferredTransform;
 if (firstTransform.a == 0 && firstTransform.d == 0 && (firstTransform.b == 1.0 || firstTransform.b == -1.0) && (firstTransform.c == 1.0 || firstTransform.c == -1.0)) {
     isFirstVideoPortrait = YES;
 }
-
-// 视频2 是否是人像方向
+    
 BOOL isSecondVideoPortrait = NO;
 CGAffineTransform secondTransform = secondVideoAssetTrack.preferredTransform;
 if (secondTransform.a == 0 && secondTransform.d == 0 && (secondTransform.b == 1.0 || secondTransform.b == -1.0) && (secondTransform.c == 1.0 || secondTransform.c == -1.0)) {
     isSecondVideoPortrait = YES;
 }
-
-// 方向不同则弹窗提示，终止操作流程
-if ((isFirstVideoAssetPortrait && !isSecondVideoAssetPortrait) || (!isFirstVideoAssetPortrait && isSecondVideoAssetPortrait)) {
-    UIAlertView *incompatibleVideoOrientationAlert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Cannot combine a video shot in portrait mode with a video shot in landscape mode." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-    [incompatibleVideoOrientationAlert show];
+    
+if ((isFirstVideoPortrait && !isSecondVideoPortrait) || (!isFirstVideoPortrait && isSecondVideoPortrait)) {
+    NSError *error = [self createNSErrorWithCode:400 errorReason:@"视频方向不一致，无法拼接"];
+    resultHandler(nil, error);
     return;
 }
-```
+
+ ```
 
 【4】添加视频处理命令
 
@@ -154,83 +163,76 @@ if ((isFirstVideoAssetPortrait && !isSecondVideoAssetPortrait) || (!isFirstVideo
 // 构建视频1 的操作命令
 AVMutableVideoCompositionInstruction *firstVideoCompositionInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
 firstVideoCompositionInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, firstVideoAssetTrack.timeRange.duration);
-
+AVMutableVideoCompositionLayerInstruction *firstVideoLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:videoCompositionTrack];
+    
+// 微信拍摄的视频tx错位，需要修复
+CGRect firstRect = {{0, 0}, naturalSizeFirst};
+CGRect firstTransformedRect = CGRectApplyAffineTransform(firstRect, firstTransform);
+firstTransform.tx -= firstTransformedRect.origin.x;
+firstTransform.ty -= firstTransformedRect.origin.y;
+[firstVideoLayerInstruction setTransform:firstTransform atTime:kCMTimeZero];
+    
+firstVideoCompositionInstruction.layerInstructions = @[firstVideoLayerInstruction];
+    
+    
 // 构建视频2 的操作命令
 AVMutableVideoCompositionInstruction * secondVideoCompositionInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
 secondVideoCompositionInstruction.timeRange = CMTimeRangeMake(firstVideoAssetTrack.timeRange.duration, CMTimeAdd(firstVideoAssetTrack.timeRange.duration, secondVideoAssetTrack.timeRange.duration));
-
-// 构建视频1 的视图命令
-AVMutableVideoCompositionLayerInstruction *firstVideoLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:videoCompositionTrack];
-[firstVideoLayerInstruction setTransform:firstTransform atTime:kCMTimeZero];
-
-// 构建视频2 的视图命令
 AVMutableVideoCompositionLayerInstruction *secondVideoLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:videoCompositionTrack];
+    
+// 微信拍摄的视频tx错位，需要修复
+CGRect secondRect = {{0, 0}, naturalSizeSecond};
+CGRect secondTransformedRect = CGRectApplyAffineTransform(secondRect, secondTransform);
+secondTransform.tx -= secondTransformedRect.origin.x;
+secondTransform.ty -= secondTransformedRect.origin.y;
+    
 [secondVideoLayerInstruction setTransform:secondTransform atTime:firstVideoAssetTrack.timeRange.duration];
-
-// 分别设置操作命令的视图命令
-firstVideoCompositionInstruction.layerInstructions = @[firstVideoLayerInstruction];
 secondVideoCompositionInstruction.layerInstructions = @[secondVideoLayerInstruction];
-
-// 构建视频处理对象，加入处理命令
+    
 AVMutableVideoComposition *mutableVideoComposition = [AVMutableVideoComposition videoComposition];
 mutableVideoComposition.instructions = @[firstVideoCompositionInstruction, secondVideoCompositionInstruction];
+
 ```
 
 【5】添加渲染尺寸和帧率
 
 ```objc
-// 获取和调整 视频1 视频2 的渲染尺寸
-CGSize naturalSizeFirst, naturalSizeSecond;
-if (isFirstVideoAssetPortrait) {
-    naturalSizeFirst = CGSizeMake(firstVideoAssetTrack.naturalSize.height, firstVideoAssetTrack.naturalSize.width);
-    naturalSizeSecond = CGSizeMake(secondVideoAssetTrack.naturalSize.height, secondVideoAssetTrack.naturalSize.width);
-} else {
-    naturalSizeFirst = firstVideoAssetTrack.naturalSize;
-    naturalSizeSecond = secondVideoAssetTrack.naturalSize;
-}
-
-// 选择最大尺寸
-float renderWidth, renderHeight;
-if (naturalSizeFirst.width > naturalSizeSecond.width) {
-    renderWidth = naturalSizeFirst.width;
-} else {
-    renderWidth = naturalSizeSecond.width;
-}
-if (naturalSizeFirst.height > naturalSizeSecond.height) {
-    renderHeight = naturalSizeFirst.height;
-} else {
-    renderHeight = naturalSizeSecond.height;
-}
-
+float renderWidth = MAX(fixedSizeFirst.width, fixedSizeSecond.width);
+float renderHeight = MAX(fixedSizeFirst.height, fixedSizeSecond.height);
+    
 mutableVideoComposition.renderSize = CGSizeMake(renderWidth, renderHeight);
 mutableVideoComposition.frameDuration = CMTimeMake(1,30);
+
 ```
 
 【6】导出视频并保存到相册
 
 ```objc
 AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mutableComposition presetName:AVAssetExportPresetHighestQuality];
-
-exporter.outputURL = 视频导出路径;
-exporter.outputFileType = AVFileTypeQuickTimeMovie;
+exporter.outputURL = videoURL;
+exporter.outputFileType = AVFileTypeMPEG4;
 exporter.shouldOptimizeForNetworkUse = YES;
 exporter.videoComposition = mutableVideoComposition;
-
+    
 [exporter exportAsynchronouslyWithCompletionHandler:^{
     dispatch_async(dispatch_get_main_queue(), ^{
         if (exporter.status == AVAssetExportSessionStatusCompleted) {
-            // 导出成功，这里调用保存视频到相册的方法
+            resultHandler(exporter.outputURL, nil);
+        } else {
+            NSError *error = [self createNSErrorWithCode:200 errorReason:@"视频导出失败"];
+            resultHandler(nil, error);
         }
     });
 }];
 
-
 ```
 
-视频裁剪的 demo，这里就不聊了。感兴趣的可以自己下载研究。
+### 聊聊 Video 裁剪
+
+视频裁剪的 demo，这里就不聊了。感兴趣的可以自己下载底部 demo 研究。
 
 
 ### 参考资料
 
 - [AVFoundation Programming Guide](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/00_Introduction.html#//apple_ref/doc/uid/TP40010188-CH1-SW3)
-- [测试 demo]()
+- [示例代码 demo](https://github.com/muhlenXi-Team/video-edit-demo)
