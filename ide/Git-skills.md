@@ -53,16 +53,16 @@ Unix 的哲学是 『没有消息就是好消息』，没有消息则说明指�
 | git push origin master | 推送 commit 记录到远端 master 分支 |
 | git push origin master --tags  | 推送 commit 记录和 tag 到远端 master 分支 |
 | git push origin -d 远端分支名   |  删除远端分支 | 
-| git clone -b 分支名  |  克隆指定分支 | 
+| git clone -b 分支名  |  clone 指定分支 | 
 | git rebase 分支名| 将当前分支的提交记录追加到指定分支后 |
-| git rebase -i HEAD~n|压缩当前分支最后 n 个commit|
+| git rebase -i HEAD~n|合并当前分支最后 n 个 commit 为一个 commit|
 
 #### 4 - 标签『tag』 操作
 
 | 命令 | 简单说明 |
 | :--------- | :---------- |
-| git tag v1.0   |  给最新 commit 打一个标签，v1.0为标签名  |
-| git tag 标签名 commit_id   |  给指定的commit打标签  |
+| git tag v1.0   |  给最新 commit 打一个标签，v1.0 为标签名  |
+| git tag 标签名 commit_id   |  给指定的 commit 打标签  |
 | git tag  |  查看所有的标签   |
 | git log --pretty=oneline --abbrev-commit   |  查看历史提交的commit id  |
 | git show 标签名   |  查看标签信息  |
