@@ -55,6 +55,7 @@ Unix 的哲学是 『没有消息就是好消息』，没有消息则说明指�
 | git push origin -d 远端分支名   |  删除远端分支 | 
 | git clone -b 分支名  |  克隆指定分支 | 
 | git rebase 分支名| 将当前分支的提交记录追加到指定分支后 |
+| git rebase -i HEAD~n|压缩当前分支最后 n 个commit|
 
 #### 4 - 标签『tag』 操作
 
