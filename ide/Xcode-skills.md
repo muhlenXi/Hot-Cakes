@@ -53,8 +53,15 @@
 
 ##### Provisioning Profiles 文件目录
 
-/User/用户名/资源库/MobileDevice/Provisioning Profiles/
+```
+/Users/muhlenxi/Library/MobileDevice/Provisioning Profiles
+```
 
+##### mobileprovision 文件转 plist
+
+```
+security cms -D -i 60f769b5-b4ae-4a9a-95dc-b5987e7f067c.mobileprovision > 60f7.plist
+```
 
 ##### 查找项目中的中文字符串
 
