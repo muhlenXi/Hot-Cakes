@@ -19,6 +19,7 @@
 | pod install --verbose --no-repo-update | 安装库和依赖 |
 | pod init  | 生成默认的 Podfile配置文件 |
 | pod search 库名|搜索第三方库|
+| pod --version | 查看版本号|
 | rm ~/Library/Caches/CocoaPods/search_index.json| 删除搜索缓存|
 
      

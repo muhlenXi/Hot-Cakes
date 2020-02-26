@@ -32,6 +32,7 @@
 - 8、[Terminal 使用小记](/ide/Terminal-skill.md)
 - 9、[Generamba](/ide/generamba.md)
 - 10、[MySQL cheat sheet](https://github.com/muhlenXi-Team/mysql-cheat-sheet)
+- 11、[fastlane](/ide/fastlane.md)
 
 ### Basics
 
