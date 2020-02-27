@@ -1,4 +1,4 @@
-## Remark
+# Remark
 
 一切成就源于实践和积累，功到自然成。与君共勉！
 
@@ -19,20 +19,21 @@
 
 - [What have you learned today?](/What-have-you-learned-today)
 
-### Develop tools
+### Develop cheat sheet
 
-- 0、[Xcode 使用小记](/ide/Xcode-skills.md)
-- 1、 [Vim 使用小记](/ide/vim-skills.md) 
-- 2、[Mac 使用小记](/ide/Mac-skills.md)
-- 3、[Hexo 使用小记](/ide/How-to-make-a-blog-by-Hexo.md)
-- 4、[AppCode 使用小记](/ide/AppCode-skills.md)
-- 5、 [Git 使用小记](/ide/Git-skills.md)
-- 6、 [CocoaPods 使用小记](/ide/CocoaPods-skills.md)
-- 7、[RubyGems 使用小记](/ide/Gem-skills.md)
-- 8、[Terminal 使用小记](/ide/Terminal-skill.md)
-- 9、[Generamba](/ide/generamba.md)
-- 10、[MySQL cheat sheet](https://github.com/muhlenXi-Team/mysql-cheat-sheet)
-- 11、[fastlane](/ide/fastlane.md)
+- 0、[Xcode](./ide/Xcode-skills.md)
+- 1、 [Vim](./ide/vim-skills.md) 
+- 2、[Mac](./ide/Mac-skills.md)
+- 3、[Hexo](./ide/How-to-make-a-blog-by-Hexo.md)
+- 4、[AppCode](./ide/AppCode-skills.md)
+- 5、 [Git](./ide/Git-skills.md)
+- 6、 [CocoaPods](./ide/CocoaPods-skills.md)
+- 7、[RubyGems](./ide/Gem-skills.md)
+- 8、[Terminal](./ide/Terminal-skill.md)
+- 9、[Generamba](./ide/generamba.md)
+- 10、[MySQL](https://github.com/muhlenXi-Team/mysql-cheat-sheet)
+- 11、[fastlane](./ide/fastlane.md)
+- 12、[Markdown](./ide/Markdown-Syntax.md)
 
 ### Basics
 

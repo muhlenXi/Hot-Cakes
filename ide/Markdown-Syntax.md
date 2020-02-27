@@ -1,56 +1,72 @@
-#### Markdown语法
+# Markdown语法
 
-#### 代码块
+## 1、标题
+
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+
+## 2、字体
+
+*斜体*
+
+**粗体**
+
+***加粗斜体***
+
+
+## 3、列表
+
+这是无序列表：
+
+- element 1
+- element 2
+- element 3
+
+这是有序列表
+
+1. 元素 1
+2. 元素 2
+3. 元素 3
+
+## 4、引用
+
+> 这是引用内容
+
+
+## 5、链接、图片
+
+[muhlenXi 的链接](http://www.muhlenxi.com)
+
+![图片](图片的url)
+
+## 6、表格
+
+| 默认格式  | 左对齐 | 居中 | 右对齐 |
+| --- | :--- | :---: | ---: |
+| 默认格式表格内容  | 左对齐表格内容 | 居中表格内容 | 右对齐表格内容 |
+| 默认格式表格内容  | 左对齐表格内容 | 居中表格内容 | 右对齐表格内容 |
+
+## 7、代码块
+
+`代码块1`
 
 ```objc
-这是代码块。
+这是代码块2。
 ```
 
-七牛云资源管理
-https://portal.qiniu.com/bucket/muhlenxi/resource
+## 8、分隔线
 
-#### 分隔线
+***
 
---------
-
-#### 链接
-
-*带 Title 的连接*
-
-This is [Baidu](http://www.baidu.com/ "百度的链接") inline link.
-
-*不带 Title 的连接*
-
-[Google](http://www.google.com)
-
-*自动链接*
-
-<http://www.muhlenxi.com>
+---
 
 
-#### 绘制表格
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
-#### 上标和小标
+## 9、上标和小标
 
 这是一个上标 <sup>[1]</sup>
 
 这是下标 H<sub>2</sub>O
-
-#### 添加图片
-
-<div align=center>
-<img src="http://7xvffo.com1.z0.glb.clouddn.com/actionsheet.PNG" width="320" height="568" alt="选项列表图"/>
-</div>
-
-### 结束语
-
-*欢迎在本文下面留言一起交流心得...*
-
-*如果本文能给你带来一定的帮助，在自己有能力的情况下，不妨赞助一下，表示对博主辛勤耕作的支持！*
