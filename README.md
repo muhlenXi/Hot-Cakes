@@ -37,18 +37,19 @@
 
 ### Basics
 
-- [Objective-C](/knowledge/oc-basics.md)
-- [Swift](/knowledge/swift-basics.md)
-- [Java](/knowledge/java-basics.md)
+- [Objective-C](./knowledge/oc-basics.md)
+- [Swift](./knowledge/swift-basics.md)
+- [Java](./knowledge/java-basics.md)
 
-### Experience
+### Notes
 
-- [iOS UI篇](/tuiqiaoNote/UserInterface.md)
-- [iOS 业务篇](/tuiqiaoNote/Business.md)
+- [UserInterface](./notes/UserInterface.md)
+- [business](./notes/business.md)
+- [HTTPS](./notes/https.md)
 
 ### Algorithm
 
-- [algorithm list](https://github.com/muhlenXi/algorithm)
+- [algorithm](https://github.com/muhlenXi/algorithm)
 
 ### Design pattern
 
