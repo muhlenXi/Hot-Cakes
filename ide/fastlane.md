@@ -17,7 +17,7 @@ fastlane -v
 
 ```shell
 fastlane add_plugin pgyer
-```shell
+```
 
 match 证书描述文件配置
 
