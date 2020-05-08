@@ -1,14 +1,25 @@
 
 [fastlane 简介](https://fastlane.tools/)
 
-### 安装
+安装 fastlane
 
 ```shell
 sudo gem install -n /usr/local/bin fastlane --verbose
 ```
 
+查看 fastlane 版本号
 
-### 证书描述文件配置
+```shell
+fastlane -v
+```
+
+安装蒲公英的 Fastlane 插件
+
+```shell
+fastlane add_plugin pgyer
+```shell
+
+match 证书描述文件配置
 
 ```shell
 fastlane match development --readonly true
