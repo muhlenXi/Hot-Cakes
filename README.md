@@ -1,6 +1,8 @@
-# 0x00 Summary
+# Hot Cakes
 
-本 Repo 主要存放我在实际项目开发中的笔记、总结、收获、实践、等。生命不息，好奇不止。
+## 0x00 Summary
+
+本 Repo 主要存放我在软件项目开发中的笔记、总结、收获、实践、等。生命不息，好奇不止。
 
 一切成就源于不断地实践和积累，能看到这个，注定你我有缘，不妨点个赞再走。
 
@@ -31,7 +33,7 @@
 
 ## 0x03 Learning Programming Language Easy Way
 
-- [Read enjoy language](./LearningLanguage/README.md)
+- [Read enjoy language](https://github.com/muhlenXi/learning-programming-language-easy-way)
 
 ## 0x04 Learning Algorithm
 
