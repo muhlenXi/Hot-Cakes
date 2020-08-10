@@ -51,6 +51,10 @@
 
 - [Read gist](READGIST.md)
 
-## 0x08 Afterword
+## 0x08 My Notes
+
+- [Swift 方法派发机制](./notes/Swift-method-dispatch.md)
+
+## 0x09 Afterword
 
 不定时更新中，编码不易，且行且珍惜。
